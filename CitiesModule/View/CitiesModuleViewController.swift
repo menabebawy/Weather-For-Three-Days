@@ -8,6 +8,7 @@
 
 import UIKit
 import Entities
+import Utils
 
 public class CitiesModuleViewController: UIViewController {
     @IBOutlet weak private var tableView: UITableView!
@@ -35,7 +36,7 @@ extension CitiesModuleViewController: CitiiesModulePresenterToView {
     }
     
     func configureCitiesTableView() {
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "CityCell")
+        tableView.register(CityTableViewCell.nib(), forCellReuseIdentifier: CityTableViewCell.identifier)
     }
 
     func loadCitiesTableView(with cities: [City]) {
@@ -53,8 +54,11 @@ extension CitiesModuleViewController: UITableViewDataSource {
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CityCell", for: indexPath)
-        cell.textLabel?.text = cities[indexPath.row].name
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: CityTableViewCell.identifier, for: indexPath) as? CityTableViewCell else {
+            return UITableViewCell()
+        }
+        
+        cell.configure(city: cities[indexPath.row])
         return cell
     }
     
@@ -66,6 +70,10 @@ extension CitiesModuleViewController: UITableViewDelegate {
     public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         // Return without check indexPath section becasue we have Only one section
         return viewToPresenterProtocol.sectionTitle()
+    }
+    
+    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CityTableViewCell.height
     }
 
 }

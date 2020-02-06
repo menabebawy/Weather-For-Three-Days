@@ -7,18 +7,21 @@
 //
 
 import UIKit
+import Entities
+import Kingfisher
 
 class CityTableViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    @IBOutlet weak private var cityNameLabel: UILabel!
+    @IBOutlet weak private var tempratureLabel: UILabel!
+    @IBOutlet weak private var weatherImageView: UIImageView!
     
+    static let identifier = "CityCell"
+    static let height: CGFloat = 80
+    
+    func configure(city: City) {
+        cityNameLabel.text = city.name
+        tempratureLabel.text = "\(city.main.temperature())"
+        weatherImageView.kf.setImage(with: URL(string: city.weather[0].iconURL))
+    }
+
 }

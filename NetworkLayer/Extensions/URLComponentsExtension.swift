@@ -66,8 +66,7 @@ extension URLComponents {
             let value = parameters[key]!
             components += queryComponents(fromKey: key, value: value)
         }
-        
-        
+
         return components.map { "\($0)=\($1)" }.joined(separator: "&")
     }
 }

@@ -12,4 +12,5 @@ public struct City: Decodable {
     public let id: Double
     public let name: String
     public let weather: [Weather]
+    public let main: Main
 }

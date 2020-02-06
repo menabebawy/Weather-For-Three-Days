@@ -11,7 +11,7 @@ import Foundation
 public enum WeatherService: ServiceProtocol {
 
     case city(name: String)
-    case cities(ids: [Int])
+    case cities(idsString: String)
 
     public var baseURL: URL {
         return URL(string: "http://api.openweathermap.org/data/2.5/")!

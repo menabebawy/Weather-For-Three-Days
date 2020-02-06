@@ -9,5 +9,5 @@
 import Foundation
 
 protocol CitiesModulePresenterToInteractor {
-    func fetchCities(ids: [Int])
+    func fetchCities(idsString: String)
 }

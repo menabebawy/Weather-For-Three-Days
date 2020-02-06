@@ -26,7 +26,7 @@ final class CitiesModulePresenter {
                 2643743: "London",
                 250441: "Amman",
                 6077243: "Montreal",
-                3182749: "Tronto"]
+                6167865: "Tronto"]
     }
     
 }
@@ -35,7 +35,8 @@ final class CitiesModulePresenter {
 
 extension CitiesModulePresenter: CitiesModuleViewToPresenter {
     func viewIsLoading() {
-        interactor.fetchCities(ids: LocalCitiesWithIDs.map { $0.key })
+        let idsString = LocalCitiesWithIDs.map { "\($0.key)" }.joined(separator: ",")
+        interactor.fetchCities(idsString: idsString)
     }
     
     func viewIsReady() {

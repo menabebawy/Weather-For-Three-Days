@@ -18,8 +18,8 @@ final class CitiesModuleInteractor {
 // MARK: - Cities module presenter to interactor
 
 extension CitiesModuleInteractor: CitiesModulePresenterToInteractor {
-    func fetchCities(ids: [Int]) {
-        let service = WeatherService.cities(ids: ids)
+    func fetchCities(idsString: String) {
+        let service = WeatherService.cities(idsString: idsString)
         sessionProvider.request(type: Cities.self, service: service) { [weak self] response in
             guard let `self` = self else { return }
             switch response {
