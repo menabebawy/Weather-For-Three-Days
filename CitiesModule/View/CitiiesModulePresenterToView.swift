@@ -6,7 +6,10 @@
 //  Copyright © 2020 Mena. All rights reserved.
 //
 
-import Foundation
+import Entities
 
 protocol CitiiesModulePresenterToView: class {
+    func viewTitle(_ title: String)
+    func configureCitiesTableView()
+    func loadCitiesTableView(with cities: [City])
 }

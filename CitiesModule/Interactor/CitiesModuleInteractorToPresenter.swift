@@ -7,6 +7,9 @@
 //
 
 import Foundation
+import Entities
 
 protocol CitiesModuleInteractorToPresenter {
+    func fetchedCities(_ cities: [City])
+    func fetchedError(_ description: String)
 }

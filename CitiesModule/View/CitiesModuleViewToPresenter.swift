@@ -9,4 +9,7 @@
 import Foundation
 
 protocol CitiesModuleViewToPresenter {
+    func viewIsLoading()
+    func viewIsReady()
+    func sectionTitle() -> String
 }
