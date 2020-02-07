@@ -20,7 +20,7 @@ class CityTableViewCell: UITableViewCell {
     
     func configure(city: City) {
         cityNameLabel.text = city.name
-        tempratureLabel.text = "\(city.main.temperature())"
+        tempratureLabel.text = city.main.temperature()
         weatherImageView.kf.setImage(with: URL(string: city.weather[0].iconURL))
     }
 

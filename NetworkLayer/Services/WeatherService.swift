@@ -10,8 +10,8 @@ import Foundation
 
 public enum WeatherService: ServiceProtocol {
 
-    case city(name: String)
     case cities(idsString: String)
+    case forecast(cityIdString: String)
 
     public var baseURL: URL {
         return URL(string: "http://api.openweathermap.org/data/2.5/")!
@@ -19,10 +19,10 @@ public enum WeatherService: ServiceProtocol {
 
     public var path: String {
         switch self {
-        case .city:
-            return "weather"
         case .cities:
             return "group"
+        case .forecast:
+            return "forecast"
         }
     }
 
@@ -32,14 +32,16 @@ public enum WeatherService: ServiceProtocol {
     
     public var task: Task {
         var parameters: [String: Any] = [:]
-        
+        let idValue: String
+
         switch self {
-        case .city(let name):
-            parameters["q"] = name
+        case .forecast(let cityId):
+            idValue = cityId
         case .cities(let ids):
-            parameters["id"] = ids
+            idValue = ids
         }
         
+        parameters["id"] = idValue
         parameters["units"] = "metric"
         parameters["APPID"] = "7764fcb1cae95e2051b8d0bba8c7d962"
         

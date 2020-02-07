@@ -8,6 +8,7 @@
 
 import Foundation
 import NetworkLayer
+import Entities
 
 final class ForecastModuleInteractor {
     var interactorToPresenterProtocol: ForecastModuleInteractorToPresenter!
@@ -17,5 +18,17 @@ final class ForecastModuleInteractor {
 // MARK: - Forecast module presenter to interactor
 
 extension ForecastModuleInteractor: ForecastModulePresenterToInteractor {
-    
+    func fetchForecast(cityId: String) {
+        let service = WeatherService.forecast(cityIdString: cityId)
+        sessionProvider.request(type: Forecasts.self, service: service) { [weak self] response in
+            guard let `self` = self else { return }
+            switch response {
+            case let .success(forecasts):
+                self.interactorToPresenterProtocol.fetchedForecasts(forecasts.list)
+            case let .failure(error):
+                self.interactorToPresenterProtocol.failed(error: error.localizedDescription)
+            }
+        }
+    }
+
 }

@@ -6,7 +6,9 @@
 //  Copyright © 2020 Mena. All rights reserved.
 //
 
-import Foundation
+import Entities
 
 protocol ForecastModuleInteractorToPresenter {
+    func fetchedForecasts(_ forecasts: [Forecast])
+    func failed(error: String)
 }

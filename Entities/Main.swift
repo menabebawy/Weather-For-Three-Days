@@ -11,8 +11,14 @@ import Foundation
 public struct Main: Decodable {
     let temp: Float
     
+    /// Use to return temprature without decimal
     public func temperature() -> String {
         return String(format: "%.0f", temp)
+    }
+    
+    /// Use to return temperature in Celsius style
+    public func celsiusTemperatureStyle() -> String {
+        return temperature() + "º"
     }
 
 }

@@ -10,4 +10,5 @@ import Foundation
 
 protocol ForecastModulePresenterToView: class {
     func setTitle()
+    func configureTableView()
 }

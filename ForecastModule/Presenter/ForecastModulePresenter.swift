@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Entities
 
 final class ForecastModulePresenter {
     weak var view: ForecastModulePresenterToView!
@@ -16,11 +17,14 @@ final class ForecastModulePresenter {
 // MARK: - Forecast module view to presenter
 
 extension ForecastModulePresenter: ForecastModuleViewToPresenter {
-    func viewIsLoading() {
+    func viewIsLoading(cityId: Int) {
+        interactor.fetchForecast(cityId: "\(cityId)")
+        
     }
     
     func viewIsReady() {
         view.setTitle()
+        view.configureTableView()
     }
     
 }
@@ -28,5 +32,12 @@ extension ForecastModulePresenter: ForecastModuleViewToPresenter {
 // MARK: - Forecast module presenter to interactor
 
 extension ForecastModulePresenter: ForecastModuleInteractorToPresenter {
+    func fetchedForecasts(_ forecasts: [Forecast]) {
+        // Update hourly list
+        // Update next 3 days list
+    }
+    
+    func failed(error: String) {
+    }
     
 }

@@ -11,17 +11,23 @@ import Foundation
 public struct Weather: Decodable {
     public let id: Int
     public let main: String
-    public let description: String
     public let icon: String
+    
+    private var baseIconUrl: String {
+        return "http://openweathermap.org/img/wn/"
+    }
 
     public var iconURL: String {
-        return "http://openweathermap.org/img/wn/" + icon + ".png"
+        return  baseIconUrl + icon + ".png"
+    }
+    
+    public var icon2XUrl: String {
+        return baseIconUrl + icon + "@2x.png"
     }
     
     enum CodingKeys: String, CodingKey {
         case id = "id"
         case main = "main"
-        case description = "description"
         case icon = "icon"
     }
 

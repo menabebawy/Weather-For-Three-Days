@@ -9,6 +9,6 @@
 import Foundation
 
 protocol ForecastModuleViewToPresenter {
-    func viewIsLoading()
+    func viewIsLoading(cityId: Int)
     func viewIsReady()
 }
