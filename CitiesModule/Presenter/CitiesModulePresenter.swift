@@ -44,6 +44,10 @@ extension CitiesModulePresenter: CitiesModuleViewToPresenter {
         view.configureCitiesTableView()
     }
     
+    func viewWillAppear() {
+        view.deselectSelectedRow()
+    }
+    
     func sectionTitle() -> String {
         return "Cities"
     }

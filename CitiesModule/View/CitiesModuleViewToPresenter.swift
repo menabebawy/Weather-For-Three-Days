@@ -11,5 +11,6 @@ import Foundation
 protocol CitiesModuleViewToPresenter {
     func viewIsLoading()
     func viewIsReady()
+    func viewWillAppear()
     func sectionTitle() -> String
 }

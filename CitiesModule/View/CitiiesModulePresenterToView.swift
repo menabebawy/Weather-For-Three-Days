@@ -11,5 +11,6 @@ import Entities
 protocol CitiiesModulePresenterToView: class {
     func viewTitle(_ title: String)
     func configureCitiesTableView()
+    func deselectSelectedRow()
     func loadCitiesTableView(with cities: [City])
 }

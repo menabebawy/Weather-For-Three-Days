@@ -24,4 +24,5 @@ public struct Weather: Decodable {
         case description = "description"
         case icon = "icon"
     }
+
 }

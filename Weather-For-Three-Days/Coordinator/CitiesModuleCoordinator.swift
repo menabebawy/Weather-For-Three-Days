@@ -8,6 +8,7 @@
 
 import UIKit
 import CitiesModule
+import Entities
 
 final class CitiesModuleCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
@@ -19,9 +20,21 @@ final class CitiesModuleCoordinator: Coordinator {
     
     func start() {
         let nibName = String(describing: CitiesModuleViewController.self)
-        let rendererViewController = CitiesModuleViewController(nibName: nibName, bundle: .main)
+        let citiesViewController = CitiesModuleViewController(nibName: nibName, bundle: .main)
+        citiesViewController.delegate = self
         navigationController.navigationBar.prefersLargeTitles = true
-        navigationController.viewControllers = [rendererViewController]
+        navigationController.viewControllers = [citiesViewController]
     }
 
+}
+
+// MARK: - Cities module view controller delegate
+
+extension CitiesModuleCoordinator: CitiesModuleViewControllerDelegate {
+    func citiesModuleViewController(_ controller: CitiesModuleViewController, didSelectCity city: City) {
+        let forecastModuleCoordinator = ForecastModuleCoordinator(navigationController: navigationController)
+        forecastModuleCoordinator.city = city
+        forecastModuleCoordinator.start()
+    }
+    
 }

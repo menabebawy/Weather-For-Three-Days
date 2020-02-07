@@ -10,11 +10,18 @@ import UIKit
 import Entities
 import Utils
 
+public protocol CitiesModuleViewControllerDelegate: class {
+    func citiesModuleViewController(_ controller: CitiesModuleViewController,
+                                    didSelectCity city: City)
+}
+
 public class CitiesModuleViewController: UIViewController {
     @IBOutlet weak private var tableView: UITableView!
     
-    var cities: [City] = []
+    private var cities: [City] = []
+    
     weak var viewToPresenterProtocol: CitiesModulePresenter!
+    public weak var delegate: CitiesModuleViewControllerDelegate?
     
     override public func loadView() {
         super.loadView()
@@ -24,6 +31,11 @@ public class CitiesModuleViewController: UIViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
         viewToPresenterProtocol.viewIsReady()
+    }
+    
+    override public func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewToPresenterProtocol.viewWillAppear()
     }
 
 }
@@ -37,6 +49,12 @@ extension CitiesModuleViewController: CitiiesModulePresenterToView {
     
     func configureCitiesTableView() {
         tableView.register(CityTableViewCell.nib(), forCellReuseIdentifier: CityTableViewCell.identifier)
+    }
+    
+    func deselectSelectedRow() {
+        if let indexPath = tableView.indexPathForSelectedRow {
+            tableView.deselectRow(at: indexPath, animated: false)
+        }
     }
 
     func loadCitiesTableView(with cities: [City]) {
@@ -67,6 +85,10 @@ extension CitiesModuleViewController: UITableViewDataSource {
 // MARK: - Table view delegate
 
 extension CitiesModuleViewController: UITableViewDelegate {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        delegate?.citiesModuleViewController(self, didSelectCity: cities[indexPath.row])
+    }
+
     public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         // Return without check indexPath section becasue we have Only one section
         return viewToPresenterProtocol.sectionTitle()
