@@ -22,14 +22,8 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ºC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WmR-d4-lQU">
-                        <rect key="frame" x="258.5" y="21" width="26.5" height="30"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                        <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5KE-2p-s24">
-                        <rect key="frame" x="240.5" y="21" width="15" height="30"/>
+                        <rect key="frame" x="262" y="21" width="15" height="30"/>
                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                         <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
@@ -42,15 +36,13 @@
                     </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="WmR-d4-lQU" firstAttribute="leading" secondItem="5KE-2p-s24" secondAttribute="trailing" constant="3" id="1m2-wM-Pcr"/>
                     <constraint firstItem="Wmy-WY-R0q" firstAttribute="centerY" secondItem="vME-e9-sTW" secondAttribute="centerY" id="GFK-3A-dxC"/>
+                    <constraint firstItem="5KE-2p-s24" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="HJ3-HP-0Qa"/>
                     <constraint firstItem="Wmy-WY-R0q" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" multiplier="1.5" id="I36-JP-UoJ"/>
-                    <constraint firstAttribute="trailing" secondItem="WmR-d4-lQU" secondAttribute="trailing" constant="8" id="Qel-0J-AB6"/>
                     <constraint firstItem="vME-e9-sTW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="XXn-Ec-LTe"/>
-                    <constraint firstItem="WmR-d4-lQU" firstAttribute="centerY" secondItem="vME-e9-sTW" secondAttribute="centerY" id="dhA-Rd-78b"/>
                     <constraint firstItem="vME-e9-sTW" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="g8L-Ew-aek"/>
-                    <constraint firstItem="5KE-2p-s24" firstAttribute="centerY" secondItem="WmR-d4-lQU" secondAttribute="centerY" id="gB2-J0-BKb"/>
                     <constraint firstItem="Wmy-WY-R0q" firstAttribute="height" secondItem="vME-e9-sTW" secondAttribute="height" id="ssj-q4-Zng"/>
+                    <constraint firstAttribute="trailing" secondItem="5KE-2p-s24" secondAttribute="trailing" constant="16" id="zzt-Ly-9oz"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

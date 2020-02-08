@@ -12,4 +12,5 @@ protocol ForecastModulePresenterToView: class {
     func setTitle()
     func configureTableView()
     func loadHourlyForecasts(_ forecoasts: [Forecast])
+    func loadNextDaysForecasts(_ forecasts: [Forecast])
 }

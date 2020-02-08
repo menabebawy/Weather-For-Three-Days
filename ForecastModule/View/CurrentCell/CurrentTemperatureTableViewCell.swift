@@ -2,7 +2,7 @@
 //  CurrentTemperatureTableViewCell.swift
 //  ForecastModule
 //
-//  Created by user165891 on 2/7/20.
+//  Created by Mena Bebawy on 2/7/20.
 //  Copyright © 2020 Mena. All rights reserved.
 //
 
@@ -20,7 +20,7 @@ final class CurrentTemperatureTableViewCell: UITableViewCell {
     
     func configure(city: City) {
         mainLabel.text = city.weather[0].main
-        temperatureLabel.text = city.main.celsiusTemperatureStyle()
+        temperatureLabel.text = city.main.temperature.celsiusTemperatureStyle()
         weatherImageView.kf.setImage(with: URL(string: city.weather[0].icon2XUrl))
     }
     

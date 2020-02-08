@@ -19,7 +19,7 @@ final class HourCollectionViewCell: UICollectionViewCell {
     
     func configure(_ forecast: Forecast) {
         houreLabel.text = forecast.hour
-        temperatureLabel.text = forecast.main.celsiusTemperatureStyle()
+        temperatureLabel.text = forecast.main.temperature.celsiusTemperatureStyle()
         temperatureImageView.kf.setImage(with: URL(string: forecast.weather[0].iconURL))
     }
 

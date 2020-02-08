@@ -40,6 +40,7 @@ public struct DateAdapter {
         calendar.component(.weekday, from: epochDate)
     }
     
+    
     public init(dateAdaptee: DateAdaptee) {
         self.dateAdaptee = dateAdaptee
     }
@@ -64,7 +65,7 @@ public struct DateAdapter {
             return "NA"
         }
     }
-
+    
 }
 
 // MARK: - Forecast date adapter
@@ -81,5 +82,21 @@ extension DateAdapter: ForecastDateAdapter {
         currentDayComponent == epochDayComponent
     }
     
+    public func isNext(daysValue: Int) -> Bool {
+        let nextdate = calendar.date(byAdding: .day, value: daysValue, to: currentDate)!
+        let epochDate = Date(timeIntervalSince1970: dateAdaptee.since1970)
+        
+        let nextDateDay = calendar.component(.day, from: nextdate)
+        let nextDateMonth = calendar.component(.month, from: nextdate)
+        let nextDateYear = calendar.component(.year, from: nextdate)
+        
+        let epochDay = calendar.component(.day, from: epochDate)
+        let epochMonth = calendar.component(.month, from: epochDate)
+        let epochYear = calendar.component(.year, from: epochDate)
+        
+        return  nextDateDay == epochDay &&
+            nextDateMonth == epochMonth &&
+            nextDateYear == epochYear
+    }
     
 }

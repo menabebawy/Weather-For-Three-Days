@@ -13,22 +13,23 @@ import Utils
 public final class ForecastModuleViewController: UIViewController {
     @IBOutlet weak private var tableView: UITableView!
     
-    private var forecasts: [Forecast] = []
+    private var hourlyForecasts: [Forecast] = []
+    private var nextDaysForecasts: [Forecast] = []
     
     var viewToPresenterProtocol: ForecastModulePresenter!
-
+    
     public var city: City!
     
     override public func loadView() {
         super.loadView()
         viewToPresenterProtocol.viewIsLoading(city: city)
     }
-
+    
     override public func viewDidLoad() {
         super.viewDidLoad()
         viewToPresenterProtocol.viewIsReady()
     }
-
+    
 }
 
 // MARK: - Forecast module presenter to view
@@ -44,14 +45,21 @@ extension ForecastModuleViewController: ForecastModulePresenterToView {
                            forCellReuseIdentifier: CurrentTemperatureTableViewCell.identifier)
         tableView.register(HourlyTableViewCell.nib(),
                            forCellReuseIdentifier: HourlyTableViewCell.identifier)
+        tableView.register(NextDayTableViewCell.nib(),
+                           forCellReuseIdentifier: NextDayTableViewCell.identifier)
     }
     
     func loadHourlyForecasts(_ forecasts: [Forecast]) {
-        self.forecasts = forecasts
+        hourlyForecasts = forecasts
         let hourlyIndexPath = IndexPath(row: 0, section: 1)
         tableView.reloadRows(at: [hourlyIndexPath], with: .none)
     }
-
+    
+    func loadNextDaysForecasts(_ forecasts: [Forecast]) {
+        nextDaysForecasts = forecasts
+        tableView.reloadSections([2], with: .none)
+    }
+    
 }
 
 // MARK: - Table view data source
@@ -60,13 +68,15 @@ extension ForecastModuleViewController: UITableViewDataSource {
     public func numberOfSections(in tableView: UITableView) -> Int {
         return 3
     }
-
+    
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
             return 1
         case 1:
             return 1
+        case 2:
+            return nextDaysForecasts.count
         default:
             break
         }
@@ -77,23 +87,38 @@ extension ForecastModuleViewController: UITableViewDataSource {
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
         case 0:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: CurrentTemperatureTableViewCell.identifier, for: indexPath) as? CurrentTemperatureTableViewCell else {
-                return UITableViewCell()
+            guard let cell = tableView.dequeueReusableCell(
+                withIdentifier: CurrentTemperatureTableViewCell.identifier,
+                for: indexPath) as? CurrentTemperatureTableViewCell else {
+                    return UITableViewCell()
             }
             cell.configure(city: city)
             return cell
+
         case 1:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: HourlyTableViewCell.identifier, for: indexPath) as? HourlyTableViewCell else {
+            guard let cell = tableView.dequeueReusableCell(
+                withIdentifier: HourlyTableViewCell.identifier,
+                for: indexPath) as? HourlyTableViewCell else {
+                    return UITableViewCell()
+            }
+            cell.configure(forecasts: self.hourlyForecasts)
+            return cell
+            
+        case 2:
+            guard  let cell = tableView.dequeueReusableCell(
+                withIdentifier: NextDayTableViewCell.identifier,
+                for: indexPath) as? NextDayTableViewCell else {
                 return UITableViewCell()
             }
-            cell.configure(forecasts: self.forecasts)
+            
+            cell.configure(forecast: nextDaysForecasts[indexPath.row])
             return cell
+
         default:
             return UITableViewCell()
         }
     }
-    
-    
+
 }
 
 // MARK: - Table view delegate
@@ -117,7 +142,8 @@ extension ForecastModuleViewController: UITableViewDelegate {
         case 1:
             return HourlyTableViewCell.height
         default:
-            return 0
+            return NextDayTableViewCell.height
         }
     }
+
 }

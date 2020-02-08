@@ -12,15 +12,25 @@ public protocol ForecastDateAdapter {
     var hour: String { get }
     var day: String { get }
     var isCurrentDay: Bool { get }
+    
+    func isNext(daysValue: Int) -> Bool
 }
 
-public struct Forecast: Decodable, ForecastDateAdapter {
+public struct Forecast: Decodable {
     public let date: Double
     public let weather: [Weather]
-    public let main: Main
-    
+    public var main: Main
     public var dateAdapter: DateAdapter!
     
+    enum CodingKeys: String, CodingKey {
+        case date = "dt"
+        case weather = "weather"
+        case main = "main"
+    }
+
+}
+
+extension Forecast: ForecastDateAdapter {
     public var day: String {
         dateAdapter.day
     }
@@ -33,9 +43,8 @@ public struct Forecast: Decodable, ForecastDateAdapter {
         dateAdapter.hour
     }
     
-    enum CodingKeys: String, CodingKey {
-        case date = "dt"
-        case weather = "weather"
-        case main = "main"
+    public func isNext(daysValue: Int) -> Bool {
+        dateAdapter.isNext(daysValue: daysValue)
     }
+
 }

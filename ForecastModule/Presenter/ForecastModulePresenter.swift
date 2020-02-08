@@ -15,7 +15,7 @@ final class ForecastModulePresenter {
     var interactor: ForecastModulePresenterToInteractor!
     
     private var city: City!
-
+    
 }
 
 // MARK: - Forecast module view to presenter
@@ -46,6 +46,26 @@ extension ForecastModulePresenter: ForecastModuleInteractorToPresenter {
         
         // Update hourly list
         view.loadHourlyForecasts(forecasts.filter { $0.isCurrentDay })
+        
+        // Update next 3 days
+        let nextOneDayResult = forecasts.filter { $0.isNext(daysValue: 1) }
+        let nextTwoDaysResult = forecasts.filter { $0.isNext(daysValue: 2) }
+        let nextThreeDaysResult = forecasts.filter { $0.isNext(daysValue: 3) }
+        
+        view.loadNextDaysForecasts([nextDayForecast(for: nextOneDayResult),
+                                    nextDayForecast(for: nextTwoDaysResult),
+                                    nextDayForecast(for: nextThreeDaysResult)])
+    }
+    
+    private func nextDayForecast(for forecasts: [Forecast]) -> Forecast {
+        var newForecast = forecasts.first!
+        
+        let temperatures = forecasts.map( { $0.main.temperature })
+        
+        newForecast.main.min = temperatures.sorted(by: <).first!
+        newForecast.main.max = temperatures.sorted(by: >).first!
+        
+        return newForecast
     }
     
     func failed(error: String) {
