@@ -68,7 +68,8 @@ extension ForecastModulePresenter: ForecastModuleInteractorToPresenter {
         return newForecast
     }
     
-    func failed(error: String) {
+    func fetchedError(_ description: String) {
+        view.showErrorAlert(withMessage: description)
     }
     
 }

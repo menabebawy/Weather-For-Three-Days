@@ -26,7 +26,7 @@ extension CitiesModuleInteractor: CitiesModulePresenterToInteractor {
             case let .success(cities):
                 self.interactorToPresenterProtocol.fetchedCities(cities.list)
             case let .failure(error):
-                self.interactorToPresenterProtocol.fetchedError(error.localizedDescription)
+                self.interactorToPresenterProtocol.fetchedError(error)
             }
         }
     }

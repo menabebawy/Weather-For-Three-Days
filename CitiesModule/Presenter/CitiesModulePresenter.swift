@@ -12,10 +12,6 @@ final class CitiesModulePresenter {
     weak var view: CitiiesModulePresenterToView!
     var interactor: CitiesModulePresenterToInteractor!
     
-    private var citiesStringsArray: [String] {
-        return ["Cairo", "Vienna", "Berlin", "Paris", "Madrid", "Montreal"]
-    }
-    
     private var LocalCitiesWithIDs: KeyValuePairs<Int, String> {
         return [360630: "Cairo",
                 2761369: "Vienna",
@@ -62,6 +58,7 @@ extension CitiesModulePresenter: CitiesModuleInteractorToPresenter {
     }
     
     func fetchedError(_ description: String) {
+        view.showErrorAlert(withMessage: description)
     }
     
 }

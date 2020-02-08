@@ -13,4 +13,5 @@ protocol ForecastModulePresenterToView: class {
     func configureTableView()
     func loadHourlyForecasts(_ forecoasts: [Forecast])
     func loadNextDaysForecasts(_ forecasts: [Forecast])
+    func showErrorAlert(withMessage message: String)
 }

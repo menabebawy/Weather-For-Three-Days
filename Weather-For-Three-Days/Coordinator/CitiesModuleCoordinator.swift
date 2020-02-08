@@ -9,6 +9,7 @@
 import UIKit
 import CitiesModule
 import Entities
+import Utils
 
 final class CitiesModuleCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
@@ -35,6 +36,11 @@ extension CitiesModuleCoordinator: CitiesModuleViewControllerDelegate {
         let forecastModuleCoordinator = ForecastModuleCoordinator(navigationController: navigationController)
         forecastModuleCoordinator.city = city
         forecastModuleCoordinator.start()
+    }
+    
+    func citiesModuleViewController(_ controller: CitiesModuleViewController,
+                                    showErrorAlertWithMessage message: String) {
+        navigationController.viewControllers[0].showErrorAlertController(withMessage: message)
     }
     
 }

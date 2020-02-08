@@ -10,5 +10,5 @@ import Entities
 
 protocol ForecastModuleInteractorToPresenter {
     func fetchedForecasts(_ forecasts: [Forecast])
-    func failed(error: String)
+    func fetchedError(_ description: String)
 }

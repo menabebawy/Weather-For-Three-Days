@@ -23,7 +23,18 @@ final class ForecastModuleCoordinator: Coordinator {
         let nibName = String(describing: ForecastModuleViewController.self)
         let forecastViewController = ForecastModuleViewController(nibName: nibName, bundle: .main)
         forecastViewController.city = city
+        forecastViewController.delegate = self
         navigationController.pushViewController(forecastViewController, animated: true)
     }
     
+}
+
+// MARK: - Forecast module view controller
+
+extension ForecastModuleCoordinator: ForecastModuleViewControllerDelegate {
+    func forecastModuleViewController(_ controller: ForecastModuleViewController,
+                                      showErrorAlertWithMessage message: String) {
+        navigationController.topViewController?.showErrorAlertController(withMessage: message)
+    }
+
 }

@@ -13,4 +13,5 @@ protocol CitiiesModulePresenterToView: class {
     func configureCitiesTableView()
     func deselectSelectedRow()
     func loadCitiesTableView(with cities: [City])
+    func showErrorAlert(withMessage message: String)
 }

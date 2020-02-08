@@ -16,4 +16,5 @@ final class CitiesModuleInitalizer: NSObject {
         let configurator = CitiesModuleConfigurator()
         configurator.configureModuleForViewInput(viewInput: citiesModuleViewController)
     }
+
 }

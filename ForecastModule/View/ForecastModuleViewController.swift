@@ -10,6 +10,11 @@ import UIKit
 import Entities
 import Utils
 
+public protocol ForecastModuleViewControllerDelegate: class {
+    func forecastModuleViewController(_ controller: ForecastModuleViewController,
+                                      showErrorAlertWithMessage message: String)
+}
+
 public final class ForecastModuleViewController: UIViewController {
     @IBOutlet weak private var tableView: UITableView!
     
@@ -19,6 +24,7 @@ public final class ForecastModuleViewController: UIViewController {
     var viewToPresenterProtocol: ForecastModulePresenter!
     
     public var city: City!
+    weak public var delegate: ForecastModuleViewControllerDelegate?
     
     override public func loadView() {
         super.loadView()
@@ -60,6 +66,10 @@ extension ForecastModuleViewController: ForecastModulePresenterToView {
         tableView.reloadSections([2], with: .none)
     }
     
+    func showErrorAlert(withMessage message: String) {
+        delegate?.forecastModuleViewController(self, showErrorAlertWithMessage: message)
+    }
+    
 }
 
 // MARK: - Table view data source
@@ -94,7 +104,7 @@ extension ForecastModuleViewController: UITableViewDataSource {
             }
             cell.configure(city: city)
             return cell
-
+            
         case 1:
             guard let cell = tableView.dequeueReusableCell(
                 withIdentifier: HourlyTableViewCell.identifier,
@@ -108,17 +118,17 @@ extension ForecastModuleViewController: UITableViewDataSource {
             guard  let cell = tableView.dequeueReusableCell(
                 withIdentifier: NextDayTableViewCell.identifier,
                 for: indexPath) as? NextDayTableViewCell else {
-                return UITableViewCell()
+                    return UITableViewCell()
             }
             
             cell.configure(forecast: nextDaysForecasts[indexPath.row])
             return cell
-
+            
         default:
             return UITableViewCell()
         }
     }
-
+    
 }
 
 // MARK: - Table view delegate
@@ -145,5 +155,5 @@ extension ForecastModuleViewController: UITableViewDelegate {
             return NextDayTableViewCell.height
         }
     }
-
+    
 }

@@ -26,7 +26,7 @@ extension ForecastModuleInteractor: ForecastModulePresenterToInteractor {
             case let .success(forecasts):
                 self.interactorToPresenterProtocol.fetchedForecasts(forecasts.list)
             case let .failure(error):
-                self.interactorToPresenterProtocol.failed(error: error.localizedDescription)
+                self.interactorToPresenterProtocol.fetchedError(error)
             }
         }
     }
