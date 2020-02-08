@@ -13,13 +13,15 @@ import Utils
 public final class ForecastModuleViewController: UIViewController {
     @IBOutlet weak private var tableView: UITableView!
     
+    private var forecasts: [Forecast] = []
+    
     var viewToPresenterProtocol: ForecastModulePresenter!
 
     public var city: City!
     
     override public func loadView() {
         super.loadView()
-        viewToPresenterProtocol.viewIsLoading(cityId: city.id)
+        viewToPresenterProtocol.viewIsLoading(city: city)
     }
 
     override public func viewDidLoad() {
@@ -40,6 +42,14 @@ extension ForecastModuleViewController: ForecastModulePresenterToView {
         tableView.tableFooterView = UIView()
         tableView.register(CurrentTemperatureTableViewCell.nib(),
                            forCellReuseIdentifier: CurrentTemperatureTableViewCell.identifier)
+        tableView.register(HourlyTableViewCell.nib(),
+                           forCellReuseIdentifier: HourlyTableViewCell.identifier)
+    }
+    
+    func loadHourlyForecasts(_ forecasts: [Forecast]) {
+        self.forecasts = forecasts
+        let hourlyIndexPath = IndexPath(row: 0, section: 1)
+        tableView.reloadRows(at: [hourlyIndexPath], with: .none)
     }
 
 }
@@ -72,6 +82,12 @@ extension ForecastModuleViewController: UITableViewDataSource {
             }
             cell.configure(city: city)
             return cell
+        case 1:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: HourlyTableViewCell.identifier, for: indexPath) as? HourlyTableViewCell else {
+                return UITableViewCell()
+            }
+            cell.configure(forecasts: self.forecasts)
+            return cell
         default:
             return UITableViewCell()
         }
@@ -98,6 +114,8 @@ extension ForecastModuleViewController: UITableViewDelegate {
         switch indexPath.section {
         case 0:
             return CurrentTemperatureTableViewCell.height
+        case 1:
+            return HourlyTableViewCell.height
         default:
             return 0
         }

@@ -17,22 +17,22 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z6t-WO-ctK">
-                        <rect key="frame" x="75.5" y="28.5" width="230" height="120"/>
+                        <rect key="frame" x="16" y="28.5" width="349" height="120"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="giO-iL-k2x">
-                                <rect key="frame" x="85.5" y="0.0" width="59.5" height="30"/>
+                                <rect key="frame" x="145" y="0.0" width="59.5" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBw-YV-eg3">
-                                <rect key="frame" x="90" y="60" width="52" height="60"/>
+                                <rect key="frame" x="149.5" y="60" width="52" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8LZ-61-07T">
-                                <rect key="frame" x="8" y="60" width="65" height="60"/>
+                                <rect key="frame" x="8" y="60" width="124.5" height="60"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -44,15 +44,16 @@
                             <constraint firstItem="giO-iL-k2x" firstAttribute="top" secondItem="z6t-WO-ctK" secondAttribute="top" id="VHH-e8-1rZ"/>
                             <constraint firstItem="8LZ-61-07T" firstAttribute="bottom" secondItem="BBw-YV-eg3" secondAttribute="bottom" id="aNY-h6-gfE"/>
                             <constraint firstItem="8LZ-61-07T" firstAttribute="top" secondItem="BBw-YV-eg3" secondAttribute="top" id="irV-uP-t5g"/>
-                            <constraint firstAttribute="width" constant="230" id="jvB-wx-XA4"/>
                             <constraint firstItem="BBw-YV-eg3" firstAttribute="centerX" secondItem="z6t-WO-ctK" secondAttribute="centerX" constant="1" id="krB-6Z-Tck"/>
                             <constraint firstAttribute="height" constant="120" id="oMg-GL-t89"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="trailing" secondItem="z6t-WO-ctK" secondAttribute="trailing" constant="16" id="gNn-wQ-nWm"/>
                     <constraint firstItem="z6t-WO-ctK" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="l00-T5-EVN"/>
                     <constraint firstItem="z6t-WO-ctK" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="vVR-xO-0Zu"/>
+                    <constraint firstItem="z6t-WO-ctK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="y80-Q2-hOT"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

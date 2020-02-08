@@ -6,9 +6,9 @@
 //  Copyright © 2020 Mena. All rights reserved.
 //
 
-import Foundation
+import Entities
 
 protocol ForecastModuleViewToPresenter {
-    func viewIsLoading(cityId: Int)
+    func viewIsLoading(city: City)
     func viewIsReady()
 }

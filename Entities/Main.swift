@@ -13,12 +13,12 @@ public struct Main: Decodable {
     
     /// Use to return temprature without decimal
     public func temperature() -> String {
-        return String(format: "%.0f", temp)
+        String(format: "%.0f", temp)
     }
     
     /// Use to return temperature in Celsius style
     public func celsiusTemperatureStyle() -> String {
-        return temperature() + "º"
+        temperature() + "º"
     }
-
+    
 }

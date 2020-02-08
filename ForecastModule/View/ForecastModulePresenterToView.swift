@@ -6,9 +6,10 @@
 //  Copyright © 2020 Mena. All rights reserved.
 //
 
-import Foundation
+import Entities
 
 protocol ForecastModulePresenterToView: class {
     func setTitle()
     func configureTableView()
+    func loadHourlyForecasts(_ forecoasts: [Forecast])
 }

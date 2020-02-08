@@ -2,18 +2,34 @@
 //  HourlyTableViewCell.swift
 //  ForecastModule
 //
-//  Created by user165891 on 2/7/20.
+//  Created by Mena Bebawy on 2/7/20.
 //  Copyright © 2020 Mena. All rights reserved.
 //
 
 import UIKit
+import Entities
 
 final class HourlyTableViewCell: UITableViewCell {
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak private var collectionView: UICollectionView!
+    
+    private var forecasts: [Forecast] = [] {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
     
     static let identifier = "HourlyCell"
-    static let height: CGFloat = 80
+    static let height: CGFloat = 100
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        collectionView.register(HourCollectionViewCell.nib(),
+                                forCellWithReuseIdentifier: HourCollectionViewCell.identifier)
+    }
+    
+    func configure(forecasts: [Forecast]) {
+        self.forecasts = forecasts
+    }
     
 }
 
@@ -21,11 +37,16 @@ final class HourlyTableViewCell: UITableViewCell {
 
 extension HourlyTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return forecasts.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HourCollectionViewCell.identifier, for: indexPath) as? HourCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        
+        cell.configure(forecasts[indexPath.row])
+        return cell
     }
     
 }
@@ -33,5 +54,11 @@ extension HourlyTableViewCell: UICollectionViewDataSource {
 // MARK: - Collection view delegate flow layout
 
 extension HourlyTableViewCell: UICollectionViewDelegateFlowLayout {
-    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: HourCollectionViewCell.width,
+                      height: HourCollectionViewCell.width)
+    }
+
 }

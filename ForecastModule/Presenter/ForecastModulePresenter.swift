@@ -8,18 +8,22 @@
 
 import Foundation
 import Entities
+import Utils
 
 final class ForecastModulePresenter {
     weak var view: ForecastModulePresenterToView!
     var interactor: ForecastModulePresenterToInteractor!
+    
+    private var city: City!
+
 }
 
 // MARK: - Forecast module view to presenter
 
 extension ForecastModulePresenter: ForecastModuleViewToPresenter {
-    func viewIsLoading(cityId: Int) {
-        interactor.fetchForecast(cityId: "\(cityId)")
-        
+    func viewIsLoading(city: City) {
+        self.city = city
+        interactor.fetchForecast(cityId: "\(city.id)")
     }
     
     func viewIsReady() {
@@ -33,8 +37,15 @@ extension ForecastModulePresenter: ForecastModuleViewToPresenter {
 
 extension ForecastModulePresenter: ForecastModuleInteractorToPresenter {
     func fetchedForecasts(_ forecasts: [Forecast]) {
+        var forecasts = forecasts
+        let timeZone = city.system.timeZone
+        
+        // Assign dateAdapter property
+        forecasts.mutateEach { $0.dateAdapter = DateAdapter(
+            dateAdaptee: DateAdaptee(since1970: $0.date, timeZone: timeZone)) }
+        
         // Update hourly list
-        // Update next 3 days list
+        view.loadHourlyForecasts(forecasts.filter { $0.isCurrentDay })
     }
     
     func failed(error: String) {

@@ -10,6 +10,7 @@ import Foundation
 
 public struct City: Decodable {
     public let id: Int
+    public let system: System
     public let date: Double
     public let name: String
     public let weather: [Weather]
@@ -17,6 +18,7 @@ public struct City: Decodable {
     
     enum CodingKeys: String, CodingKey {
         case id = "id"
+        case system = "sys"
         case date = "dt"
         case name = "name"
         case weather = "weather"
