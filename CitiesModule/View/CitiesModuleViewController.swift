@@ -30,7 +30,7 @@ public class CitiesModuleViewController: UIViewController {
         super.loadView()
         viewToPresenterProtocol.viewIsLoading()
     }
-    
+
     override public func viewDidLoad() {
         super.viewDidLoad()
         viewToPresenterProtocol.viewIsReady()
@@ -40,12 +40,12 @@ public class CitiesModuleViewController: UIViewController {
         super.viewWillAppear(animated)
         viewToPresenterProtocol.viewWillAppear()
     }
-    
+
 }
 
 // MARK: - Cities module presenter to view
 
-extension CitiesModuleViewController: CitiiesModulePresenterToView {
+extension CitiesModuleViewController: CitiesModulePresenterToView {
     func viewTitle(_ title: String) {
         self.title = title
     }
@@ -59,7 +59,7 @@ extension CitiesModuleViewController: CitiiesModulePresenterToView {
             tableView.deselectRow(at: indexPath, animated: false)
         }
     }
-    
+
     func loadCitiesTableView(with cities: [City]) {
         self.cities = cities
         tableView.reloadData()
@@ -79,9 +79,8 @@ extension CitiesModuleViewController: UITableViewDataSource {
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(
-            withIdentifier: CityTableViewCell.identifier, for: indexPath) as? CityTableViewCell else {
-                return UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: CityTableViewCell.identifier, for: indexPath) as? CityTableViewCell else {
+            return UITableViewCell()
         }
         
         cell.configure(city: cities[indexPath.row])
@@ -96,7 +95,7 @@ extension CitiesModuleViewController: UITableViewDelegate {
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         delegate?.citiesModuleViewController(self, didSelectCity: cities[indexPath.row])
     }
-    
+
     public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         // Return without check indexPath section becasue we have Only one section
         return viewToPresenterProtocol.sectionTitle()
@@ -105,5 +104,5 @@ extension CitiesModuleViewController: UITableViewDelegate {
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return CityTableViewCell.height
     }
-    
+
 }

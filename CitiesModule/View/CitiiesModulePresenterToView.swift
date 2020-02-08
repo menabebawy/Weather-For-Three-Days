@@ -8,7 +8,7 @@
 
 import Entities
 
-protocol CitiiesModulePresenterToView: class {
+protocol CitiesModulePresenterToView: class {
     func viewTitle(_ title: String)
     func configureCitiesTableView()
     func deselectSelectedRow()

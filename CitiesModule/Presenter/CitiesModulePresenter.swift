@@ -9,7 +9,7 @@
 import Entities
 
 final class CitiesModulePresenter {
-    weak var view: CitiiesModulePresenterToView!
+    weak var view: CitiesModulePresenterToView!
     var interactor: CitiesModulePresenterToInteractor!
     
     private var LocalCitiesWithIDs: KeyValuePairs<Int, String> {
