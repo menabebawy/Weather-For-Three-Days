@@ -9,6 +9,7 @@
 import Entities
 
 protocol ForecastModuleViewToPresenter {
-    func viewIsLoading(city: City)
+    func viewIsLoading(cityId: Int)
+    func currentCity(_ city: City)
     func viewIsReady()
 }

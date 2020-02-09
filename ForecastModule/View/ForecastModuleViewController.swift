@@ -28,7 +28,8 @@ public final class ForecastModuleViewController: UIViewController {
     
     override public func loadView() {
         super.loadView()
-        viewToPresenterProtocol.viewIsLoading(city: city)
+        viewToPresenterProtocol.viewIsLoading(cityId: city.id)
+        viewToPresenterProtocol.currentCity(city)
     }
     
     override public func viewDidLoad() {

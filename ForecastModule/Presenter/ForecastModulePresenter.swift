@@ -21,9 +21,12 @@ final class ForecastModulePresenter {
 // MARK: - Forecast module view to presenter
 
 extension ForecastModulePresenter: ForecastModuleViewToPresenter {
-    func viewIsLoading(city: City) {
+    func viewIsLoading(cityId: Int) {
+        interactor.fetchForecast(cityId: "\(cityId)")
+    }
+    
+    func currentCity(_ city: City) {
         self.city = city
-        interactor.fetchForecast(cityId: "\(city.id)")
     }
     
     func viewIsReady() {
