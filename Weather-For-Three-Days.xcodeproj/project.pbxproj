@@ -1,0 +1,2026 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5A0EA29B23EC315F001EF316 /* NetworkLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A0EA29923EC315F001EF316 /* NetworkLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A0EA29E23EC315F001EF316 /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0EA29723EC315F001EF316 /* NetworkLayer.framework */; };
+		5A0EA29F23EC315F001EF316 /* NetworkLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0EA29723EC315F001EF316 /* NetworkLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5A0EA2AD23EC3173001EF316 /* Entities.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A0EA2AB23EC3173001EF316 /* Entities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A0EA2B023EC3173001EF316 /* Entities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0EA2A923EC3173001EF316 /* Entities.framework */; };
+		5A0EA2B123EC3173001EF316 /* Entities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0EA2A923EC3173001EF316 /* Entities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5A0EA2BE23EC31B1001EF316 /* CitiesModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A0EA2BC23EC31B1001EF316 /* CitiesModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A0EA2C123EC31B1001EF316 /* CitiesModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0EA2BA23EC31B1001EF316 /* CitiesModule.framework */; };
+		5A0EA2C223EC31B1001EF316 /* CitiesModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0EA2BA23EC31B1001EF316 /* CitiesModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5A0EA2D323EC31CF001EF316 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0EA2C723EC31CF001EF316 /* WeatherService.swift */; };
+		5A0EA2D423EC31CF001EF316 /* URLComponentsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0EA2C923EC31CF001EF316 /* URLComponentsExtension.swift */; };
+		5A0EA2D523EC31CF001EF316 /* URLRequestExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0EA2CA23EC31CF001EF316 /* URLRequestExtension.swift */; };
+		5A0EA2D623EC31CF001EF316 /* URLSessionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0EA2CC23EC31CF001EF316 /* URLSessionProvider.swift */; };
+		5A0EA2D723EC31CF001EF316 /* ParametersEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0EA2CE23EC31CF001EF316 /* ParametersEncoding.swift */; };
+		5A0EA2D823EC31CF001EF316 /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0EA2CF23EC31CF001EF316 /* NetworkResponse.swift */; };
+		5A0EA2D923EC31CF001EF316 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0EA2D023EC31CF001EF316 /* HTTPMethod.swift */; };
+		5A0EA2DA23EC31CF001EF316 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0EA2D123EC31CF001EF316 /* Task.swift */; };
+		5A0EA2DB23EC31CF001EF316 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0EA2D223EC31CF001EF316 /* NetworkError.swift */; };
+		5A0EA2E023EC31DE001EF316 /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0EA2DD23EC31DE001EF316 /* ServiceProtocol.swift */; };
+		5A0EA2E123EC31DE001EF316 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0EA2DE23EC31DE001EF316 /* URLSessionProtocol.swift */; };
+		5A0EA2E223EC31DE001EF316 /* ProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0EA2DF23EC31DE001EF316 /* ProviderProtocol.swift */; };
+		5A0EA2E923EC32EA001EF316 /* CitiesModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0EA2E723EC32EA001EF316 /* CitiesModuleViewController.swift */; };
+		5A0EA2EA23EC32EA001EF316 /* CitiesModuleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A0EA2E823EC32EA001EF316 /* CitiesModuleViewController.xib */; };
+		5A0EA2EC23EC32FE001EF316 /* CitiiesModulePresenterToView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0EA2EB23EC32FE001EF316 /* CitiiesModulePresenterToView.swift */; };
+		5A0EA2EE23EC3344001EF316 /* CitiesModuleViewToPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0EA2ED23EC3344001EF316 /* CitiesModuleViewToPresenter.swift */; };
+		5A0EA2F023EC3367001EF316 /* CitiesModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0EA2EF23EC3367001EF316 /* CitiesModulePresenter.swift */; };
+		5A0EA2F223EC33C9001EF316 /* CitiesModuleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0EA2F123EC33C9001EF316 /* CitiesModuleInteractor.swift */; };
+		5A0EA2F423EC3400001EF316 /* CitiesModulePresenterToInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0EA2F323EC3400001EF316 /* CitiesModulePresenterToInteractor.swift */; };
+		5A0EA2F623EC3434001EF316 /* CitiesModuleInteractorToPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0EA2F523EC3434001EF316 /* CitiesModuleInteractorToPresenter.swift */; };
+		5A0EA2F823EC3455001EF316 /* CitiesModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0EA2F723EC3455001EF316 /* CitiesModuleConfigurator.swift */; };
+		5A0EA2FA23EC35E5001EF316 /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0EA29723EC315F001EF316 /* NetworkLayer.framework */; };
+		5A0EA2FB23EC35E5001EF316 /* NetworkLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0EA29723EC315F001EF316 /* NetworkLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5A0EA2FF23EC35F1001EF316 /* Entities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0EA2A923EC3173001EF316 /* Entities.framework */; };
+		5A0EA30023EC35F1001EF316 /* Entities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0EA2A923EC3173001EF316 /* Entities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5A0EA30423EC362A001EF316 /* CitiesModuleInitalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0EA30323EC362A001EF316 /* CitiesModuleInitalizer.swift */; };
+		5A0EA30723EC3813001EF316 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0EA30623EC3813001EF316 /* Coordinator.swift */; };
+		5A0EA30923EC383E001EF316 /* CitiesModuleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0EA30823EC383E001EF316 /* CitiesModuleCoordinator.swift */; };
+		5A0EA30A23EC3902001EF316 /* CitiesModuleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A0EA2E823EC32EA001EF316 /* CitiesModuleViewController.xib */; };
+		5A0EA30C23EC3E0E001EF316 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0EA30B23EC3E0E001EF316 /* Weather.swift */; };
+		5A0EA30E23EC454B001EF316 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0EA30D23EC454B001EF316 /* City.swift */; };
+		5A0EA31223EC486F001EF316 /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0EA31023EC486F001EF316 /* CityTableViewCell.swift */; };
+		5A0EA31323EC486F001EF316 /* CityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A0EA31123EC486F001EF316 /* CityTableViewCell.xib */; };
+		5A0EA31523EC49CD001EF316 /* Cities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0EA31423EC49CD001EF316 /* Cities.swift */; };
+		5A0F4FF723EDD6F600E8E30A /* ForecastModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A0F4FF523EDD6F600E8E30A /* ForecastModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A0F4FFA23EDD6F600E8E30A /* ForecastModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0F4FF323EDD6F600E8E30A /* ForecastModule.framework */; };
+		5A0F4FFB23EDD6F600E8E30A /* ForecastModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0F4FF323EDD6F600E8E30A /* ForecastModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5A0F500523EDD75500E8E30A /* ForecastModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0F500323EDD75500E8E30A /* ForecastModuleViewController.swift */; };
+		5A0F500623EDD75500E8E30A /* ForecastModuleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A0F500423EDD75500E8E30A /* ForecastModuleViewController.xib */; };
+		5A0F500823EDD76900E8E30A /* ForecastModuleViewToPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0F500723EDD76900E8E30A /* ForecastModuleViewToPresenter.swift */; };
+		5A0F500A23EDD77C00E8E30A /* ForecastModulePresenterToView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0F500923EDD77C00E8E30A /* ForecastModulePresenterToView.swift */; };
+		5A0F500C23EDD7D500E8E30A /* ForecastModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0F500B23EDD7D500E8E30A /* ForecastModulePresenter.swift */; };
+		5A0F500E23EDD7F800E8E30A /* ForecastModuleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0F500D23EDD7F800E8E30A /* ForecastModuleInteractor.swift */; };
+		5A0F501023EDD81F00E8E30A /* ForecastModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0F500F23EDD81F00E8E30A /* ForecastModuleConfigurator.swift */; };
+		5A0F501223EDD84900E8E30A /* ForecastModuleIntializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0F501123EDD84900E8E30A /* ForecastModuleIntializer.swift */; };
+		5A0F501423EDD87500E8E30A /* ForecastModuleInteractorToPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0F501323EDD87500E8E30A /* ForecastModuleInteractorToPresenter.swift */; };
+		5A0F501623EDD88700E8E30A /* ForecastModulePresenterToInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0F501523EDD88700E8E30A /* ForecastModulePresenterToInteractor.swift */; };
+		5A0F501823EDDCE300E8E30A /* ForecastModuleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0F501723EDDCE300E8E30A /* ForecastModuleCoordinator.swift */; };
+		5A0F501923EDE0D500E8E30A /* ForecastModuleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A0F500423EDD75500E8E30A /* ForecastModuleViewController.xib */; };
+		5A0F501D23EDED3300E8E30A /* CurrentTemperatureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0F501B23EDED3300E8E30A /* CurrentTemperatureTableViewCell.swift */; };
+		5A0F501E23EDED3300E8E30A /* CurrentTemperatureTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A0F501C23EDED3300E8E30A /* CurrentTemperatureTableViewCell.xib */; };
+		5A0F501F23EDF3A500E8E30A /* Entities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0EA2A923EC3173001EF316 /* Entities.framework */; };
+		5A0F502023EDF3A500E8E30A /* Entities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0EA2A923EC3173001EF316 /* Entities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5A0F502423EDF3AB00E8E30A /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0EA29723EC315F001EF316 /* NetworkLayer.framework */; };
+		5A0F502523EDF3AB00E8E30A /* NetworkLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0EA29723EC315F001EF316 /* NetworkLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5A0F502923EDF3B100E8E30A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 5A0F502823EDF3B100E8E30A /* Kingfisher */; };
+		5A0F502A23EDF3B800E8E30A /* Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A1878F723ECC2920043EDAD /* Utils.framework */; };
+		5A0F502B23EDF3B800E8E30A /* Utils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5A1878F723ECC2920043EDAD /* Utils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5A0F503123EDFB0500E8E30A /* HourlyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0F502F23EDFB0500E8E30A /* HourlyTableViewCell.swift */; };
+		5A0F503223EDFB0500E8E30A /* HourlyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A0F503023EDFB0500E8E30A /* HourlyTableViewCell.xib */; };
+		5A0F503523EDFC7A00E8E30A /* HourCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0F503323EDFC7A00E8E30A /* HourCollectionViewCell.swift */; };
+		5A0F503623EDFC7A00E8E30A /* HourCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A0F503423EDFC7A00E8E30A /* HourCollectionViewCell.xib */; };
+		5A0F503823EE0DAD00E8E30A /* Forecasts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0F503723EE0DAD00E8E30A /* Forecasts.swift */; };
+		5A0F503A23EE0DEA00E8E30A /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0F503923EE0DE900E8E30A /* Forecast.swift */; };
+		5A1878F123ECC18E0043EDAD /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1878F023ECC18E0043EDAD /* Main.swift */; };
+		5A1878FB23ECC2920043EDAD /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A1878F923ECC2920043EDAD /* Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A1878FE23ECC2920043EDAD /* Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A1878F723ECC2920043EDAD /* Utils.framework */; };
+		5A1878FF23ECC2920043EDAD /* Utils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5A1878F723ECC2920043EDAD /* Utils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5A18790423ECC2EC0043EDAD /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A18790323ECC2EC0043EDAD /* UIView+Extension.swift */; };
+		5A18790623ECCFCA0043EDAD /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 5A18790523ECCFCA0043EDAD /* Kingfisher */; };
+		5A3F59E223EEBFEF00874ECB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A81780023EC19E8006680FA /* AppDelegate.swift */; };
+		5A3F59E323EEC00100874ECB /* HourCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A0F503423EDFC7A00E8E30A /* HourCollectionViewCell.xib */; };
+		5A3F59E423EEC0BA00874ECB /* HourlyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A0F503023EDFB0500E8E30A /* HourlyTableViewCell.xib */; };
+		5A3F59E823EEC8F600874ECB /* NextDayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F59E623EEC8F600874ECB /* NextDayTableViewCell.swift */; };
+		5A3F59E923EEC8F600874ECB /* NextDayTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A3F59E723EEC8F600874ECB /* NextDayTableViewCell.xib */; };
+		5A3F59EA23EEC90400874ECB /* NextDayTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A3F59E723EEC8F600874ECB /* NextDayTableViewCell.xib */; };
+		5A3F59EC23EECC2A00874ECB /* Float+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F59EB23EECC2A00874ECB /* Float+Extension.swift */; };
+		5A3F59EE23EEEEC200874ECB /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F59ED23EEEEC200874ECB /* UIViewController+Extension.swift */; };
+		5A3F59F623EEFDDC00874ECB /* CitiesModulePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F59F523EEFDDC00874ECB /* CitiesModulePresenterTests.swift */; };
+		5A3F59F823EEFDDC00874ECB /* CitiesModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0EA2BA23EC31B1001EF316 /* CitiesModule.framework */; };
+		5A3F59FF23EEFE0800874ECB /* CitiesModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0EA2E723EC32EA001EF316 /* CitiesModuleViewController.swift */; };
+		5A3F5A0223EEFFA100874ECB /* CitiesModuleConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F5A0123EEFFA100874ECB /* CitiesModuleConfiguratorTests.swift */; };
+		5A3F5A0423EF012B00874ECB /* CitiesModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0EA2F723EC3455001EF316 /* CitiesModuleConfigurator.swift */; };
+		5A3F5A0523EF013500874ECB /* CitiesModuleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0EA2F123EC33C9001EF316 /* CitiesModuleInteractor.swift */; };
+		5A3F5A0623EF013900874ECB /* CitiesModulePresenterToInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0EA2F323EC3400001EF316 /* CitiesModulePresenterToInteractor.swift */; };
+		5A3F5A0723EF013C00874ECB /* CitiesModuleInteractorToPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0EA2F523EC3434001EF316 /* CitiesModuleInteractorToPresenter.swift */; };
+		5A3F5A0823EF013F00874ECB /* CitiesModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0EA2EF23EC3367001EF316 /* CitiesModulePresenter.swift */; };
+		5A3F5A0923EF014A00874ECB /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0EA31023EC486F001EF316 /* CityTableViewCell.swift */; };
+		5A3F5A0A23EF014E00874ECB /* CitiiesModulePresenterToView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0EA2EB23EC32FE001EF316 /* CitiiesModulePresenterToView.swift */; };
+		5A3F5A0B23EF015100874ECB /* CitiesModuleViewToPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0EA2ED23EC3344001EF316 /* CitiesModuleViewToPresenter.swift */; };
+		5A3F5A0E23EF01F800874ECB /* CitiesModuleInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F5A0D23EF01F800874ECB /* CitiesModuleInteractorTests.swift */; };
+		5A4E4F0123F06B9300239E91 /* ForecastModuleConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4E4F0023F06B9300239E91 /* ForecastModuleConfiguratorTests.swift */; };
+		5A4E4F0323F06B9300239E91 /* ForecastModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0F4FF323EDD6F600E8E30A /* ForecastModule.framework */; };
+		5A4E4F0923F06BA800239E91 /* ForecastModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0F500F23EDD81F00E8E30A /* ForecastModuleConfigurator.swift */; };
+		5A4E4F0A23F06BAC00239E91 /* ForecastModuleIntializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0F501123EDD84900E8E30A /* ForecastModuleIntializer.swift */; };
+		5A4E4F0B23F06BB100239E91 /* ForecastModuleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0F500D23EDD7F800E8E30A /* ForecastModuleInteractor.swift */; };
+		5A4E4F0C23F06BB500239E91 /* ForecastModuleInteractorToPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0F501323EDD87500E8E30A /* ForecastModuleInteractorToPresenter.swift */; };
+		5A4E4F0D23F06BB900239E91 /* ForecastModulePresenterToInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0F501523EDD88700E8E30A /* ForecastModulePresenterToInteractor.swift */; };
+		5A4E4F0E23F06BBE00239E91 /* ForecastModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0F500B23EDD7D500E8E30A /* ForecastModulePresenter.swift */; };
+		5A4E4F0F23F06BC600239E91 /* ForecastModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0F500323EDD75500E8E30A /* ForecastModuleViewController.swift */; };
+		5A4E4F1023F06BC900239E91 /* ForecastModuleViewToPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0F500723EDD76900E8E30A /* ForecastModuleViewToPresenter.swift */; };
+		5A4E4F1123F06BCC00239E91 /* ForecastModulePresenterToView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0F500923EDD77C00E8E30A /* ForecastModulePresenterToView.swift */; };
+		5A4E4F1223F06BD200239E91 /* CurrentTemperatureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0F501B23EDED3300E8E30A /* CurrentTemperatureTableViewCell.swift */; };
+		5A4E4F1323F06BDD00239E91 /* HourlyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0F502F23EDFB0500E8E30A /* HourlyTableViewCell.swift */; };
+		5A4E4F1423F06BE100239E91 /* HourCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0F503323EDFC7A00E8E30A /* HourCollectionViewCell.swift */; };
+		5A4E4F1923F06CBF00239E91 /* ForecastModuleInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4E4F1823F06CBF00239E91 /* ForecastModuleInteractorTests.swift */; };
+		5A4E4F1B23F06CD900239E91 /* ForecastModulePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4E4F1A23F06CD900239E91 /* ForecastModulePresenterTests.swift */; };
+		5A4E4F1C23F06D5D00239E91 /* NextDayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F59E623EEC8F600874ECB /* NextDayTableViewCell.swift */; };
+		5A81780123EC19E8006680FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A81780023EC19E8006680FA /* AppDelegate.swift */; };
+		5A81780323EC19E8006680FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A81780223EC19E8006680FA /* SceneDelegate.swift */; };
+		5A81780A23EC19E9006680FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A81780923EC19E9006680FA /* Assets.xcassets */; };
+		5A81780D23EC19E9006680FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A81780B23EC19E9006680FA /* LaunchScreen.storyboard */; };
+		5A827AFE23EC53BC00A5C197 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 5A827AFD23EC53BC00A5C197 /* Kingfisher */; };
+		5AC96C1C23EE991A008476D4 /* System.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC96C1B23EE991A008476D4 /* System.swift */; };
+		5AC96C1F23EE9AC6008476D4 /* Entities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0EA2A923EC3173001EF316 /* Entities.framework */; };
+		5AC96C2023EE9AC6008476D4 /* Entities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0EA2A923EC3173001EF316 /* Entities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5AC96C2823EEAF6B008476D4 /* DateAdaptee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC96C1D23EE9A38008476D4 /* DateAdaptee.swift */; };
+		5AC96C2923EEAF6F008476D4 /* DateAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC96C1923EE9107008476D4 /* DateAdapter.swift */; };
+		5AC96C2B23EEB524008476D4 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC96C2A23EEB524008476D4 /* Array+Extension.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5A0EA29C23EC315F001EF316 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A8177F523EC19E8006680FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A0EA29623EC315F001EF316;
+			remoteInfo = NetworkLayer;
+		};
+		5A0EA2AE23EC3173001EF316 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A8177F523EC19E8006680FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A0EA2A823EC3173001EF316;
+			remoteInfo = Entities;
+		};
+		5A0EA2BF23EC31B1001EF316 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A8177F523EC19E8006680FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A0EA2B923EC31B1001EF316;
+			remoteInfo = CitiesModule;
+		};
+		5A0EA2FC23EC35E5001EF316 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A8177F523EC19E8006680FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A0EA29623EC315F001EF316;
+			remoteInfo = NetworkLayer;
+		};
+		5A0EA30123EC35F2001EF316 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A8177F523EC19E8006680FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A0EA2A823EC3173001EF316;
+			remoteInfo = Entities;
+		};
+		5A0F4FF823EDD6F600E8E30A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A8177F523EC19E8006680FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A0F4FF223EDD6F600E8E30A;
+			remoteInfo = ForecastModule;
+		};
+		5A0F502123EDF3A500E8E30A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A8177F523EC19E8006680FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A0EA2A823EC3173001EF316;
+			remoteInfo = Entities;
+		};
+		5A0F502623EDF3AB00E8E30A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A8177F523EC19E8006680FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A0EA29623EC315F001EF316;
+			remoteInfo = NetworkLayer;
+		};
+		5A0F502C23EDF3B800E8E30A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A8177F523EC19E8006680FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A1878F623ECC2920043EDAD;
+			remoteInfo = Utils;
+		};
+		5A1878FC23ECC2920043EDAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A8177F523EC19E8006680FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A1878F623ECC2920043EDAD;
+			remoteInfo = Utils;
+		};
+		5A3F59F923EEFDDC00874ECB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A8177F523EC19E8006680FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A0EA2B923EC31B1001EF316;
+			remoteInfo = CitiesModule;
+		};
+		5A4E4F0423F06B9300239E91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A8177F523EC19E8006680FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A0F4FF223EDD6F600E8E30A;
+			remoteInfo = ForecastModule;
+		};
+		5AC96C2123EE9AC6008476D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A8177F523EC19E8006680FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A0EA2A823EC3173001EF316;
+			remoteInfo = Entities;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5A0EA2A323EC315F001EF316 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5A0F4FFB23EDD6F600E8E30A /* ForecastModule.framework in Embed Frameworks */,
+				5A1878FF23ECC2920043EDAD /* Utils.framework in Embed Frameworks */,
+				5A0EA29F23EC315F001EF316 /* NetworkLayer.framework in Embed Frameworks */,
+				5A0EA2B123EC3173001EF316 /* Entities.framework in Embed Frameworks */,
+				5A0EA2C223EC31B1001EF316 /* CitiesModule.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A0EA2FE23EC35E5001EF316 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5A0EA2FB23EC35E5001EF316 /* NetworkLayer.framework in Embed Frameworks */,
+				5A0EA30023EC35F1001EF316 /* Entities.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A0F502323EDF3A500E8E30A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5A0F502023EDF3A500E8E30A /* Entities.framework in Embed Frameworks */,
+				5A0F502B23EDF3B800E8E30A /* Utils.framework in Embed Frameworks */,
+				5A0F502523EDF3AB00E8E30A /* NetworkLayer.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AC96C2323EE9AC6008476D4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5AC96C2023EE9AC6008476D4 /* Entities.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		5A0EA29723EC315F001EF316 /* NetworkLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A0EA29923EC315F001EF316 /* NetworkLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkLayer.h; sourceTree = "<group>"; };
+		5A0EA29A23EC315F001EF316 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A0EA2A923EC3173001EF316 /* Entities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Entities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A0EA2AB23EC3173001EF316 /* Entities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Entities.h; sourceTree = "<group>"; };
+		5A0EA2AC23EC3173001EF316 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A0EA2BA23EC31B1001EF316 /* CitiesModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CitiesModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A0EA2BC23EC31B1001EF316 /* CitiesModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CitiesModule.h; sourceTree = "<group>"; };
+		5A0EA2BD23EC31B1001EF316 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A0EA2C723EC31CF001EF316 /* WeatherService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
+		5A0EA2C923EC31CF001EF316 /* URLComponentsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLComponentsExtension.swift; sourceTree = "<group>"; };
+		5A0EA2CA23EC31CF001EF316 /* URLRequestExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRequestExtension.swift; sourceTree = "<group>"; };
+		5A0EA2CC23EC31CF001EF316 /* URLSessionProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionProvider.swift; sourceTree = "<group>"; };
+		5A0EA2CE23EC31CF001EF316 /* ParametersEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParametersEncoding.swift; sourceTree = "<group>"; };
+		5A0EA2CF23EC31CF001EF316 /* NetworkResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
+		5A0EA2D023EC31CF001EF316 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		5A0EA2D123EC31CF001EF316 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		5A0EA2D223EC31CF001EF316 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		5A0EA2DD23EC31DE001EF316 /* ServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
+		5A0EA2DE23EC31DE001EF316 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
+		5A0EA2DF23EC31DE001EF316 /* ProviderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderProtocol.swift; sourceTree = "<group>"; };
+		5A0EA2E723EC32EA001EF316 /* CitiesModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesModuleViewController.swift; sourceTree = "<group>"; };
+		5A0EA2E823EC32EA001EF316 /* CitiesModuleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CitiesModuleViewController.xib; sourceTree = "<group>"; };
+		5A0EA2EB23EC32FE001EF316 /* CitiiesModulePresenterToView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiiesModulePresenterToView.swift; sourceTree = "<group>"; };
+		5A0EA2ED23EC3344001EF316 /* CitiesModuleViewToPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesModuleViewToPresenter.swift; sourceTree = "<group>"; };
+		5A0EA2EF23EC3367001EF316 /* CitiesModulePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesModulePresenter.swift; sourceTree = "<group>"; };
+		5A0EA2F123EC33C9001EF316 /* CitiesModuleInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesModuleInteractor.swift; sourceTree = "<group>"; };
+		5A0EA2F323EC3400001EF316 /* CitiesModulePresenterToInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesModulePresenterToInteractor.swift; sourceTree = "<group>"; };
+		5A0EA2F523EC3434001EF316 /* CitiesModuleInteractorToPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesModuleInteractorToPresenter.swift; sourceTree = "<group>"; };
+		5A0EA2F723EC3455001EF316 /* CitiesModuleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesModuleConfigurator.swift; sourceTree = "<group>"; };
+		5A0EA30323EC362A001EF316 /* CitiesModuleInitalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesModuleInitalizer.swift; sourceTree = "<group>"; };
+		5A0EA30623EC3813001EF316 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		5A0EA30823EC383E001EF316 /* CitiesModuleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesModuleCoordinator.swift; sourceTree = "<group>"; };
+		5A0EA30B23EC3E0E001EF316 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		5A0EA30D23EC454B001EF316 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		5A0EA31023EC486F001EF316 /* CityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableViewCell.swift; sourceTree = "<group>"; };
+		5A0EA31123EC486F001EF316 /* CityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityTableViewCell.xib; sourceTree = "<group>"; };
+		5A0EA31423EC49CD001EF316 /* Cities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cities.swift; sourceTree = "<group>"; };
+		5A0F4FF323EDD6F600E8E30A /* ForecastModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ForecastModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A0F4FF523EDD6F600E8E30A /* ForecastModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForecastModule.h; sourceTree = "<group>"; };
+		5A0F4FF623EDD6F600E8E30A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A0F500323EDD75500E8E30A /* ForecastModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastModuleViewController.swift; sourceTree = "<group>"; };
+		5A0F500423EDD75500E8E30A /* ForecastModuleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForecastModuleViewController.xib; sourceTree = "<group>"; };
+		5A0F500723EDD76900E8E30A /* ForecastModuleViewToPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastModuleViewToPresenter.swift; sourceTree = "<group>"; };
+		5A0F500923EDD77C00E8E30A /* ForecastModulePresenterToView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastModulePresenterToView.swift; sourceTree = "<group>"; };
+		5A0F500B23EDD7D500E8E30A /* ForecastModulePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastModulePresenter.swift; sourceTree = "<group>"; };
+		5A0F500D23EDD7F800E8E30A /* ForecastModuleInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastModuleInteractor.swift; sourceTree = "<group>"; };
+		5A0F500F23EDD81F00E8E30A /* ForecastModuleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastModuleConfigurator.swift; sourceTree = "<group>"; };
+		5A0F501123EDD84900E8E30A /* ForecastModuleIntializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastModuleIntializer.swift; sourceTree = "<group>"; };
+		5A0F501323EDD87500E8E30A /* ForecastModuleInteractorToPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastModuleInteractorToPresenter.swift; sourceTree = "<group>"; };
+		5A0F501523EDD88700E8E30A /* ForecastModulePresenterToInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastModulePresenterToInteractor.swift; sourceTree = "<group>"; };
+		5A0F501723EDDCE300E8E30A /* ForecastModuleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastModuleCoordinator.swift; sourceTree = "<group>"; };
+		5A0F501B23EDED3300E8E30A /* CurrentTemperatureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentTemperatureTableViewCell.swift; sourceTree = "<group>"; };
+		5A0F501C23EDED3300E8E30A /* CurrentTemperatureTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentTemperatureTableViewCell.xib; sourceTree = "<group>"; };
+		5A0F502F23EDFB0500E8E30A /* HourlyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyTableViewCell.swift; sourceTree = "<group>"; };
+		5A0F503023EDFB0500E8E30A /* HourlyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HourlyTableViewCell.xib; sourceTree = "<group>"; };
+		5A0F503323EDFC7A00E8E30A /* HourCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourCollectionViewCell.swift; sourceTree = "<group>"; };
+		5A0F503423EDFC7A00E8E30A /* HourCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HourCollectionViewCell.xib; sourceTree = "<group>"; };
+		5A0F503723EE0DAD00E8E30A /* Forecasts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecasts.swift; sourceTree = "<group>"; };
+		5A0F503923EE0DE900E8E30A /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		5A1878F023ECC18E0043EDAD /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		5A1878F723ECC2920043EDAD /* Utils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Utils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A1878F923ECC2920043EDAD /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		5A1878FA23ECC2920043EDAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A18790323ECC2EC0043EDAD /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		5A3F59E623EEC8F600874ECB /* NextDayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextDayTableViewCell.swift; sourceTree = "<group>"; };
+		5A3F59E723EEC8F600874ECB /* NextDayTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NextDayTableViewCell.xib; sourceTree = "<group>"; };
+		5A3F59EB23EECC2A00874ECB /* Float+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Float+Extension.swift"; sourceTree = "<group>"; };
+		5A3F59ED23EEEEC200874ECB /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		5A3F59F323EEFDDC00874ECB /* CitiesModuleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CitiesModuleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A3F59F523EEFDDC00874ECB /* CitiesModulePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesModulePresenterTests.swift; sourceTree = "<group>"; };
+		5A3F59F723EEFDDC00874ECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A3F5A0123EEFFA100874ECB /* CitiesModuleConfiguratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesModuleConfiguratorTests.swift; sourceTree = "<group>"; };
+		5A3F5A0D23EF01F800874ECB /* CitiesModuleInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesModuleInteractorTests.swift; sourceTree = "<group>"; };
+		5A4E4EFE23F06B9300239E91 /* ForecastModuleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ForecastModuleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A4E4F0023F06B9300239E91 /* ForecastModuleConfiguratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastModuleConfiguratorTests.swift; sourceTree = "<group>"; };
+		5A4E4F0223F06B9300239E91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A4E4F1823F06CBF00239E91 /* ForecastModuleInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastModuleInteractorTests.swift; sourceTree = "<group>"; };
+		5A4E4F1A23F06CD900239E91 /* ForecastModulePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastModulePresenterTests.swift; sourceTree = "<group>"; };
+		5A8177FD23EC19E8006680FA /* Weather-For-Three-Days.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weather-For-Three-Days.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A81780023EC19E8006680FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5A81780223EC19E8006680FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5A81780923EC19E9006680FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5A81780C23EC19E9006680FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5A81780E23EC19E9006680FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5AC96C1923EE9107008476D4 /* DateAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateAdapter.swift; sourceTree = "<group>"; };
+		5AC96C1B23EE991A008476D4 /* System.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = System.swift; sourceTree = "<group>"; };
+		5AC96C1D23EE9A38008476D4 /* DateAdaptee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateAdaptee.swift; sourceTree = "<group>"; };
+		5AC96C2A23EEB524008476D4 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5A0EA29423EC315F001EF316 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A0EA2A623EC3173001EF316 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A0EA2B723EC31B1001EF316 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A18790623ECCFCA0043EDAD /* Kingfisher in Frameworks */,
+				5A0EA2FA23EC35E5001EF316 /* NetworkLayer.framework in Frameworks */,
+				5A0EA2FF23EC35F1001EF316 /* Entities.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A0F4FF023EDD6F600E8E30A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A0F502A23EDF3B800E8E30A /* Utils.framework in Frameworks */,
+				5A0F502923EDF3B100E8E30A /* Kingfisher in Frameworks */,
+				5A0F501F23EDF3A500E8E30A /* Entities.framework in Frameworks */,
+				5A0F502423EDF3AB00E8E30A /* NetworkLayer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A1878F423ECC2920043EDAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AC96C1F23EE9AC6008476D4 /* Entities.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A3F59F023EEFDDC00874ECB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A3F59F823EEFDDC00874ECB /* CitiesModule.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A4E4EFB23F06B9300239E91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A4E4F0323F06B9300239E91 /* ForecastModule.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A8177FA23EC19E8006680FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A827AFE23EC53BC00A5C197 /* Kingfisher in Frameworks */,
+				5A1878FE23ECC2920043EDAD /* Utils.framework in Frameworks */,
+				5A0EA29E23EC315F001EF316 /* NetworkLayer.framework in Frameworks */,
+				5A0F4FFA23EDD6F600E8E30A /* ForecastModule.framework in Frameworks */,
+				5A0EA2B023EC3173001EF316 /* Entities.framework in Frameworks */,
+				5A0EA2C123EC31B1001EF316 /* CitiesModule.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5A0EA29823EC315F001EF316 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				5A0EA2DC23EC31DE001EF316 /* Protocols */,
+				5A0EA2CD23EC31CF001EF316 /* Enums */,
+				5A0EA2C823EC31CF001EF316 /* Extensions */,
+				5A0EA2CB23EC31CF001EF316 /* Provider */,
+				5A0EA2C623EC31CF001EF316 /* Services */,
+				5A0EA29923EC315F001EF316 /* NetworkLayer.h */,
+				5A0EA29A23EC315F001EF316 /* Info.plist */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		5A0EA2AA23EC3173001EF316 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				5A0EA31423EC49CD001EF316 /* Cities.swift */,
+				5A0EA30D23EC454B001EF316 /* City.swift */,
+				5A0F503723EE0DAD00E8E30A /* Forecasts.swift */,
+				5A0F503923EE0DE900E8E30A /* Forecast.swift */,
+				5AC96C1B23EE991A008476D4 /* System.swift */,
+				5A0EA30B23EC3E0E001EF316 /* Weather.swift */,
+				5A1878F023ECC18E0043EDAD /* Main.swift */,
+				5AC96C1D23EE9A38008476D4 /* DateAdaptee.swift */,
+				5AC96C1923EE9107008476D4 /* DateAdapter.swift */,
+				5A0EA2AB23EC3173001EF316 /* Entities.h */,
+				5A0EA2AC23EC3173001EF316 /* Info.plist */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		5A0EA2BB23EC31B1001EF316 /* CitiesModule */ = {
+			isa = PBXGroup;
+			children = (
+				5A0EA2E623EC32C5001EF316 /* Configurator */,
+				5A0EA2E523EC32BE001EF316 /* Interactor */,
+				5A0EA2E423EC32B3001EF316 /* Presenter */,
+				5A0EA2E323EC32A9001EF316 /* View */,
+				5A0EA2BC23EC31B1001EF316 /* CitiesModule.h */,
+				5A0EA2BD23EC31B1001EF316 /* Info.plist */,
+			);
+			path = CitiesModule;
+			sourceTree = "<group>";
+		};
+		5A0EA2C623EC31CF001EF316 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5A0EA2C723EC31CF001EF316 /* WeatherService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		5A0EA2C823EC31CF001EF316 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5A0EA2C923EC31CF001EF316 /* URLComponentsExtension.swift */,
+				5A0EA2CA23EC31CF001EF316 /* URLRequestExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5A0EA2CB23EC31CF001EF316 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				5A0EA2CC23EC31CF001EF316 /* URLSessionProvider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		5A0EA2CD23EC31CF001EF316 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				5A0EA2CE23EC31CF001EF316 /* ParametersEncoding.swift */,
+				5A0EA2CF23EC31CF001EF316 /* NetworkResponse.swift */,
+				5A0EA2D023EC31CF001EF316 /* HTTPMethod.swift */,
+				5A0EA2D123EC31CF001EF316 /* Task.swift */,
+				5A0EA2D223EC31CF001EF316 /* NetworkError.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		5A0EA2DC23EC31DE001EF316 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				5A0EA2DD23EC31DE001EF316 /* ServiceProtocol.swift */,
+				5A0EA2DE23EC31DE001EF316 /* URLSessionProtocol.swift */,
+				5A0EA2DF23EC31DE001EF316 /* ProviderProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		5A0EA2E323EC32A9001EF316 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5A0EA2E723EC32EA001EF316 /* CitiesModuleViewController.swift */,
+				5A0EA2E823EC32EA001EF316 /* CitiesModuleViewController.xib */,
+				5A0EA30F23EC483F001EF316 /* CityCell */,
+				5A0EA2EB23EC32FE001EF316 /* CitiiesModulePresenterToView.swift */,
+				5A0EA2ED23EC3344001EF316 /* CitiesModuleViewToPresenter.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5A0EA2E423EC32B3001EF316 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				5A0EA2EF23EC3367001EF316 /* CitiesModulePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		5A0EA2E523EC32BE001EF316 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				5A0EA2F123EC33C9001EF316 /* CitiesModuleInteractor.swift */,
+				5A0EA2F323EC3400001EF316 /* CitiesModulePresenterToInteractor.swift */,
+				5A0EA2F523EC3434001EF316 /* CitiesModuleInteractorToPresenter.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		5A0EA2E623EC32C5001EF316 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				5A0EA2F723EC3455001EF316 /* CitiesModuleConfigurator.swift */,
+				5A0EA30323EC362A001EF316 /* CitiesModuleInitalizer.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		5A0EA2F923EC35E5001EF316 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5A0EA30523EC3765001EF316 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				5A0EA30623EC3813001EF316 /* Coordinator.swift */,
+				5A0EA30823EC383E001EF316 /* CitiesModuleCoordinator.swift */,
+				5A0F501723EDDCE300E8E30A /* ForecastModuleCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		5A0EA30F23EC483F001EF316 /* CityCell */ = {
+			isa = PBXGroup;
+			children = (
+				5A0EA31023EC486F001EF316 /* CityTableViewCell.swift */,
+				5A0EA31123EC486F001EF316 /* CityTableViewCell.xib */,
+			);
+			path = CityCell;
+			sourceTree = "<group>";
+		};
+		5A0F4FF423EDD6F600E8E30A /* ForecastModule */ = {
+			isa = PBXGroup;
+			children = (
+				5A0F500223EDD73B00E8E30A /* Configurator */,
+				5A0F500123EDD73100E8E30A /* Interactor */,
+				5A0F500023EDD72700E8E30A /* Presenter */,
+				5A0F4FFF23EDD72100E8E30A /* View */,
+				5A0F4FF523EDD6F600E8E30A /* ForecastModule.h */,
+				5A0F4FF623EDD6F600E8E30A /* Info.plist */,
+			);
+			path = ForecastModule;
+			sourceTree = "<group>";
+		};
+		5A0F4FFF23EDD72100E8E30A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5A0F500323EDD75500E8E30A /* ForecastModuleViewController.swift */,
+				5A0F500423EDD75500E8E30A /* ForecastModuleViewController.xib */,
+				5A0F501A23EDE51A00E8E30A /* CurrentCell */,
+				5A0F502E23EDFAEC00E8E30A /* HourlyCell */,
+				5A3F59E523EEC8CE00874ECB /* NextDayCell */,
+				5A0F500723EDD76900E8E30A /* ForecastModuleViewToPresenter.swift */,
+				5A0F500923EDD77C00E8E30A /* ForecastModulePresenterToView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5A0F500023EDD72700E8E30A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				5A0F500B23EDD7D500E8E30A /* ForecastModulePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		5A0F500123EDD73100E8E30A /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				5A0F500D23EDD7F800E8E30A /* ForecastModuleInteractor.swift */,
+				5A0F501323EDD87500E8E30A /* ForecastModuleInteractorToPresenter.swift */,
+				5A0F501523EDD88700E8E30A /* ForecastModulePresenterToInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		5A0F500223EDD73B00E8E30A /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				5A0F500F23EDD81F00E8E30A /* ForecastModuleConfigurator.swift */,
+				5A0F501123EDD84900E8E30A /* ForecastModuleIntializer.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		5A0F501A23EDE51A00E8E30A /* CurrentCell */ = {
+			isa = PBXGroup;
+			children = (
+				5A0F501B23EDED3300E8E30A /* CurrentTemperatureTableViewCell.swift */,
+				5A0F501C23EDED3300E8E30A /* CurrentTemperatureTableViewCell.xib */,
+			);
+			path = CurrentCell;
+			sourceTree = "<group>";
+		};
+		5A0F502E23EDFAEC00E8E30A /* HourlyCell */ = {
+			isa = PBXGroup;
+			children = (
+				5A0F502F23EDFB0500E8E30A /* HourlyTableViewCell.swift */,
+				5A0F503023EDFB0500E8E30A /* HourlyTableViewCell.xib */,
+				5A0F503323EDFC7A00E8E30A /* HourCollectionViewCell.swift */,
+				5A0F503423EDFC7A00E8E30A /* HourCollectionViewCell.xib */,
+			);
+			path = HourlyCell;
+			sourceTree = "<group>";
+		};
+		5A1878F823ECC2920043EDAD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5AC96C1723EE90E7008476D4 /* Extensions */,
+				5A1878F923ECC2920043EDAD /* Utils.h */,
+				5A1878FA23ECC2920043EDAD /* Info.plist */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		5A3F59E523EEC8CE00874ECB /* NextDayCell */ = {
+			isa = PBXGroup;
+			children = (
+				5A3F59E623EEC8F600874ECB /* NextDayTableViewCell.swift */,
+				5A3F59E723EEC8F600874ECB /* NextDayTableViewCell.xib */,
+			);
+			path = NextDayCell;
+			sourceTree = "<group>";
+		};
+		5A3F59F423EEFDDC00874ECB /* CitiesModuleTests */ = {
+			isa = PBXGroup;
+			children = (
+				5A3F5A0023EEFF1E00874ECB /* Configurator */,
+				5A3F5A0C23EF01D600874ECB /* Interactor */,
+				5A3F5A0F23EF02F600874ECB /* Presenter */,
+				5A3F59F723EEFDDC00874ECB /* Info.plist */,
+			);
+			path = CitiesModuleTests;
+			sourceTree = "<group>";
+		};
+		5A3F5A0023EEFF1E00874ECB /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				5A3F5A0123EEFFA100874ECB /* CitiesModuleConfiguratorTests.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		5A3F5A0C23EF01D600874ECB /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				5A3F5A0D23EF01F800874ECB /* CitiesModuleInteractorTests.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		5A3F5A0F23EF02F600874ECB /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				5A3F59F523EEFDDC00874ECB /* CitiesModulePresenterTests.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		5A4E4EFF23F06B9300239E91 /* ForecastModuleTests */ = {
+			isa = PBXGroup;
+			children = (
+				5A4E4F1723F06C8E00239E91 /* Configurator */,
+				5A4E4F1623F06C8600239E91 /* Interactor */,
+				5A4E4F1523F06C7E00239E91 /* Presenter */,
+				5A4E4F0223F06B9300239E91 /* Info.plist */,
+			);
+			path = ForecastModuleTests;
+			sourceTree = "<group>";
+		};
+		5A4E4F1523F06C7E00239E91 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				5A4E4F1A23F06CD900239E91 /* ForecastModulePresenterTests.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		5A4E4F1623F06C8600239E91 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				5A4E4F1823F06CBF00239E91 /* ForecastModuleInteractorTests.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		5A4E4F1723F06C8E00239E91 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				5A4E4F0023F06B9300239E91 /* ForecastModuleConfiguratorTests.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		5A8177F423EC19E8006680FA = {
+			isa = PBXGroup;
+			children = (
+				5A8177FF23EC19E8006680FA /* Weather-For-Three-Days */,
+				5A0EA2BB23EC31B1001EF316 /* CitiesModule */,
+				5A3F59F423EEFDDC00874ECB /* CitiesModuleTests */,
+				5A0F4FF423EDD6F600E8E30A /* ForecastModule */,
+				5A4E4EFF23F06B9300239E91 /* ForecastModuleTests */,
+				5A0EA2AA23EC3173001EF316 /* Entities */,
+				5A0EA29823EC315F001EF316 /* NetworkLayer */,
+				5A1878F823ECC2920043EDAD /* Utils */,
+				5A8177FE23EC19E8006680FA /* Products */,
+				5A0EA2F923EC35E5001EF316 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5A8177FE23EC19E8006680FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5A8177FD23EC19E8006680FA /* Weather-For-Three-Days.app */,
+				5A0EA29723EC315F001EF316 /* NetworkLayer.framework */,
+				5A0EA2A923EC3173001EF316 /* Entities.framework */,
+				5A0EA2BA23EC31B1001EF316 /* CitiesModule.framework */,
+				5A1878F723ECC2920043EDAD /* Utils.framework */,
+				5A0F4FF323EDD6F600E8E30A /* ForecastModule.framework */,
+				5A3F59F323EEFDDC00874ECB /* CitiesModuleTests.xctest */,
+				5A4E4EFE23F06B9300239E91 /* ForecastModuleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5A8177FF23EC19E8006680FA /* Weather-For-Three-Days */ = {
+			isa = PBXGroup;
+			children = (
+				5A81780023EC19E8006680FA /* AppDelegate.swift */,
+				5A81780223EC19E8006680FA /* SceneDelegate.swift */,
+				5A0EA30523EC3765001EF316 /* Coordinator */,
+				5A81780923EC19E9006680FA /* Assets.xcassets */,
+				5A81780B23EC19E9006680FA /* LaunchScreen.storyboard */,
+				5A81780E23EC19E9006680FA /* Info.plist */,
+			);
+			path = "Weather-For-Three-Days";
+			sourceTree = "<group>";
+		};
+		5AC96C1723EE90E7008476D4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5A18790323ECC2EC0043EDAD /* UIView+Extension.swift */,
+				5AC96C2A23EEB524008476D4 /* Array+Extension.swift */,
+				5A3F59EB23EECC2A00874ECB /* Float+Extension.swift */,
+				5A3F59ED23EEEEC200874ECB /* UIViewController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		5A0EA29223EC315F001EF316 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A0EA29B23EC315F001EF316 /* NetworkLayer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A0EA2A423EC3173001EF316 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A0EA2AD23EC3173001EF316 /* Entities.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A0EA2B523EC31B1001EF316 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A0EA2BE23EC31B1001EF316 /* CitiesModule.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A0F4FEE23EDD6F600E8E30A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A0F4FF723EDD6F600E8E30A /* ForecastModule.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A1878F223ECC2920043EDAD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A1878FB23ECC2920043EDAD /* Utils.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5A0EA29623EC315F001EF316 /* NetworkLayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A0EA2A023EC315F001EF316 /* Build configuration list for PBXNativeTarget "NetworkLayer" */;
+			buildPhases = (
+				5A0EA29223EC315F001EF316 /* Headers */,
+				5A0EA29323EC315F001EF316 /* Sources */,
+				5A0EA29423EC315F001EF316 /* Frameworks */,
+				5A0EA29523EC315F001EF316 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NetworkLayer;
+			productName = NetworkLayer;
+			productReference = 5A0EA29723EC315F001EF316 /* NetworkLayer.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5A0EA2A823EC3173001EF316 /* Entities */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A0EA2B223EC3173001EF316 /* Build configuration list for PBXNativeTarget "Entities" */;
+			buildPhases = (
+				5A0EA2A423EC3173001EF316 /* Headers */,
+				5A0EA2A523EC3173001EF316 /* Sources */,
+				5A0EA2A623EC3173001EF316 /* Frameworks */,
+				5A0EA2A723EC3173001EF316 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Entities;
+			productName = Entities;
+			productReference = 5A0EA2A923EC3173001EF316 /* Entities.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5A0EA2B923EC31B1001EF316 /* CitiesModule */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A0EA2C323EC31B1001EF316 /* Build configuration list for PBXNativeTarget "CitiesModule" */;
+			buildPhases = (
+				5A0EA2B523EC31B1001EF316 /* Headers */,
+				5A0EA2B623EC31B1001EF316 /* Sources */,
+				5A0EA2B723EC31B1001EF316 /* Frameworks */,
+				5A0EA2B823EC31B1001EF316 /* Resources */,
+				5A0EA2FE23EC35E5001EF316 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A0EA2FD23EC35E5001EF316 /* PBXTargetDependency */,
+				5A0EA30223EC35F2001EF316 /* PBXTargetDependency */,
+			);
+			name = CitiesModule;
+			packageProductDependencies = (
+				5A18790523ECCFCA0043EDAD /* Kingfisher */,
+			);
+			productName = CitiesModule;
+			productReference = 5A0EA2BA23EC31B1001EF316 /* CitiesModule.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5A0F4FF223EDD6F600E8E30A /* ForecastModule */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A0F4FFC23EDD6F600E8E30A /* Build configuration list for PBXNativeTarget "ForecastModule" */;
+			buildPhases = (
+				5A0F4FEE23EDD6F600E8E30A /* Headers */,
+				5A0F4FEF23EDD6F600E8E30A /* Sources */,
+				5A0F4FF023EDD6F600E8E30A /* Frameworks */,
+				5A0F4FF123EDD6F600E8E30A /* Resources */,
+				5A0F502323EDF3A500E8E30A /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A0F502223EDF3A500E8E30A /* PBXTargetDependency */,
+				5A0F502723EDF3AB00E8E30A /* PBXTargetDependency */,
+				5A0F502D23EDF3B800E8E30A /* PBXTargetDependency */,
+			);
+			name = ForecastModule;
+			packageProductDependencies = (
+				5A0F502823EDF3B100E8E30A /* Kingfisher */,
+			);
+			productName = ForecastModule;
+			productReference = 5A0F4FF323EDD6F600E8E30A /* ForecastModule.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5A1878F623ECC2920043EDAD /* Utils */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A18790023ECC2920043EDAD /* Build configuration list for PBXNativeTarget "Utils" */;
+			buildPhases = (
+				5A1878F223ECC2920043EDAD /* Headers */,
+				5A1878F323ECC2920043EDAD /* Sources */,
+				5A1878F423ECC2920043EDAD /* Frameworks */,
+				5A1878F523ECC2920043EDAD /* Resources */,
+				5AC96C2323EE9AC6008476D4 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5AC96C2223EE9AC6008476D4 /* PBXTargetDependency */,
+			);
+			name = Utils;
+			productName = Utils;
+			productReference = 5A1878F723ECC2920043EDAD /* Utils.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5A3F59F223EEFDDC00874ECB /* CitiesModuleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A3F59FB23EEFDDC00874ECB /* Build configuration list for PBXNativeTarget "CitiesModuleTests" */;
+			buildPhases = (
+				5A3F59EF23EEFDDC00874ECB /* Sources */,
+				5A3F59F023EEFDDC00874ECB /* Frameworks */,
+				5A3F59F123EEFDDC00874ECB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A3F59FA23EEFDDC00874ECB /* PBXTargetDependency */,
+			);
+			name = CitiesModuleTests;
+			productName = CitiesModuleTests;
+			productReference = 5A3F59F323EEFDDC00874ECB /* CitiesModuleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5A4E4EFD23F06B9300239E91 /* ForecastModuleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A4E4F0823F06B9300239E91 /* Build configuration list for PBXNativeTarget "ForecastModuleTests" */;
+			buildPhases = (
+				5A4E4EFA23F06B9300239E91 /* Sources */,
+				5A4E4EFB23F06B9300239E91 /* Frameworks */,
+				5A4E4EFC23F06B9300239E91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A4E4F0523F06B9300239E91 /* PBXTargetDependency */,
+			);
+			name = ForecastModuleTests;
+			productName = ForecastModuleTests;
+			productReference = 5A4E4EFE23F06B9300239E91 /* ForecastModuleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5A8177FC23EC19E8006680FA /* Weather-For-Three-Days */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A81781123EC19E9006680FA /* Build configuration list for PBXNativeTarget "Weather-For-Three-Days" */;
+			buildPhases = (
+				5A8177F923EC19E8006680FA /* Sources */,
+				5A8177FA23EC19E8006680FA /* Frameworks */,
+				5A8177FB23EC19E8006680FA /* Resources */,
+				5A0EA2A323EC315F001EF316 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A0EA29D23EC315F001EF316 /* PBXTargetDependency */,
+				5A0EA2AF23EC3173001EF316 /* PBXTargetDependency */,
+				5A0EA2C023EC31B1001EF316 /* PBXTargetDependency */,
+				5A1878FD23ECC2920043EDAD /* PBXTargetDependency */,
+				5A0F4FF923EDD6F600E8E30A /* PBXTargetDependency */,
+			);
+			name = "Weather-For-Three-Days";
+			packageProductDependencies = (
+				5A827AFD23EC53BC00A5C197 /* Kingfisher */,
+			);
+			productName = "Weather-For-Three-Days";
+			productReference = 5A8177FD23EC19E8006680FA /* Weather-For-Three-Days.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5A8177F523EC19E8006680FA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = Mena;
+				TargetAttributes = {
+					5A0EA29623EC315F001EF316 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					5A0EA2A823EC3173001EF316 = {
+						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
+					};
+					5A0EA2B923EC31B1001EF316 = {
+						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
+					};
+					5A0F4FF223EDD6F600E8E30A = {
+						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
+					};
+					5A1878F623ECC2920043EDAD = {
+						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
+					};
+					5A3F59F223EEFDDC00874ECB = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					5A4E4EFD23F06B9300239E91 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					5A8177FC23EC19E8006680FA = {
+						CreatedOnToolsVersion = 11.3;
+					};
+				};
+			};
+			buildConfigurationList = 5A8177F823EC19E8006680FA /* Build configuration list for PBXProject "Weather-For-Three-Days" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5A8177F423EC19E8006680FA;
+			packageReferences = (
+				5A827AFC23EC53BC00A5C197 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
+			productRefGroup = 5A8177FE23EC19E8006680FA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5A8177FC23EC19E8006680FA /* Weather-For-Three-Days */,
+				5A0EA29623EC315F001EF316 /* NetworkLayer */,
+				5A0EA2A823EC3173001EF316 /* Entities */,
+				5A0EA2B923EC31B1001EF316 /* CitiesModule */,
+				5A1878F623ECC2920043EDAD /* Utils */,
+				5A0F4FF223EDD6F600E8E30A /* ForecastModule */,
+				5A3F59F223EEFDDC00874ECB /* CitiesModuleTests */,
+				5A4E4EFD23F06B9300239E91 /* ForecastModuleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5A0EA29523EC315F001EF316 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A0EA2A723EC3173001EF316 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A0EA2B823EC31B1001EF316 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A0EA31323EC486F001EF316 /* CityTableViewCell.xib in Resources */,
+				5A0EA2EA23EC32EA001EF316 /* CitiesModuleViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A0F4FF123EDD6F600E8E30A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A0F503623EDFC7A00E8E30A /* HourCollectionViewCell.xib in Resources */,
+				5A0F503223EDFB0500E8E30A /* HourlyTableViewCell.xib in Resources */,
+				5A0F501E23EDED3300E8E30A /* CurrentTemperatureTableViewCell.xib in Resources */,
+				5A3F59E923EEC8F600874ECB /* NextDayTableViewCell.xib in Resources */,
+				5A0F500623EDD75500E8E30A /* ForecastModuleViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A1878F523ECC2920043EDAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A3F59F123EEFDDC00874ECB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A4E4EFC23F06B9300239E91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A8177FB23EC19E8006680FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A3F59E423EEC0BA00874ECB /* HourlyTableViewCell.xib in Resources */,
+				5A81780D23EC19E9006680FA /* LaunchScreen.storyboard in Resources */,
+				5A0EA30A23EC3902001EF316 /* CitiesModuleViewController.xib in Resources */,
+				5A0F501923EDE0D500E8E30A /* ForecastModuleViewController.xib in Resources */,
+				5A81780A23EC19E9006680FA /* Assets.xcassets in Resources */,
+				5A3F59E323EEC00100874ECB /* HourCollectionViewCell.xib in Resources */,
+				5A3F59EA23EEC90400874ECB /* NextDayTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5A0EA29323EC315F001EF316 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A0EA2DA23EC31CF001EF316 /* Task.swift in Sources */,
+				5A0EA2D523EC31CF001EF316 /* URLRequestExtension.swift in Sources */,
+				5A0EA2E223EC31DE001EF316 /* ProviderProtocol.swift in Sources */,
+				5A0EA2D623EC31CF001EF316 /* URLSessionProvider.swift in Sources */,
+				5A0EA2D923EC31CF001EF316 /* HTTPMethod.swift in Sources */,
+				5A0EA2D323EC31CF001EF316 /* WeatherService.swift in Sources */,
+				5A0EA2E123EC31DE001EF316 /* URLSessionProtocol.swift in Sources */,
+				5A0EA2D723EC31CF001EF316 /* ParametersEncoding.swift in Sources */,
+				5A0EA2DB23EC31CF001EF316 /* NetworkError.swift in Sources */,
+				5A0EA2D423EC31CF001EF316 /* URLComponentsExtension.swift in Sources */,
+				5A0EA2D823EC31CF001EF316 /* NetworkResponse.swift in Sources */,
+				5A0EA2E023EC31DE001EF316 /* ServiceProtocol.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A0EA2A523EC3173001EF316 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A0EA31523EC49CD001EF316 /* Cities.swift in Sources */,
+				5AC96C1C23EE991A008476D4 /* System.swift in Sources */,
+				5A0F503823EE0DAD00E8E30A /* Forecasts.swift in Sources */,
+				5A0EA30E23EC454B001EF316 /* City.swift in Sources */,
+				5A1878F123ECC18E0043EDAD /* Main.swift in Sources */,
+				5A0F503A23EE0DEA00E8E30A /* Forecast.swift in Sources */,
+				5AC96C2823EEAF6B008476D4 /* DateAdaptee.swift in Sources */,
+				5A0EA30C23EC3E0E001EF316 /* Weather.swift in Sources */,
+				5AC96C2923EEAF6F008476D4 /* DateAdapter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A0EA2B623EC31B1001EF316 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A0EA2E923EC32EA001EF316 /* CitiesModuleViewController.swift in Sources */,
+				5A0EA2F023EC3367001EF316 /* CitiesModulePresenter.swift in Sources */,
+				5A0EA31223EC486F001EF316 /* CityTableViewCell.swift in Sources */,
+				5A0EA30423EC362A001EF316 /* CitiesModuleInitalizer.swift in Sources */,
+				5A0EA2F223EC33C9001EF316 /* CitiesModuleInteractor.swift in Sources */,
+				5A0EA2F823EC3455001EF316 /* CitiesModuleConfigurator.swift in Sources */,
+				5A0EA2F423EC3400001EF316 /* CitiesModulePresenterToInteractor.swift in Sources */,
+				5A0EA2F623EC3434001EF316 /* CitiesModuleInteractorToPresenter.swift in Sources */,
+				5A0EA2EC23EC32FE001EF316 /* CitiiesModulePresenterToView.swift in Sources */,
+				5A0EA2EE23EC3344001EF316 /* CitiesModuleViewToPresenter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A0F4FEF23EDD6F600E8E30A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A0F501D23EDED3300E8E30A /* CurrentTemperatureTableViewCell.swift in Sources */,
+				5A0F500523EDD75500E8E30A /* ForecastModuleViewController.swift in Sources */,
+				5A0F500E23EDD7F800E8E30A /* ForecastModuleInteractor.swift in Sources */,
+				5A0F501223EDD84900E8E30A /* ForecastModuleIntializer.swift in Sources */,
+				5A0F503523EDFC7A00E8E30A /* HourCollectionViewCell.swift in Sources */,
+				5A0F501023EDD81F00E8E30A /* ForecastModuleConfigurator.swift in Sources */,
+				5A0F500C23EDD7D500E8E30A /* ForecastModulePresenter.swift in Sources */,
+				5A0F503123EDFB0500E8E30A /* HourlyTableViewCell.swift in Sources */,
+				5A3F59E223EEBFEF00874ECB /* AppDelegate.swift in Sources */,
+				5A3F59E823EEC8F600874ECB /* NextDayTableViewCell.swift in Sources */,
+				5A0F500823EDD76900E8E30A /* ForecastModuleViewToPresenter.swift in Sources */,
+				5A0F500A23EDD77C00E8E30A /* ForecastModulePresenterToView.swift in Sources */,
+				5A0F501623EDD88700E8E30A /* ForecastModulePresenterToInteractor.swift in Sources */,
+				5A0F501423EDD87500E8E30A /* ForecastModuleInteractorToPresenter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A1878F323ECC2920043EDAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A3F59EE23EEEEC200874ECB /* UIViewController+Extension.swift in Sources */,
+				5A18790423ECC2EC0043EDAD /* UIView+Extension.swift in Sources */,
+				5A3F59EC23EECC2A00874ECB /* Float+Extension.swift in Sources */,
+				5AC96C2B23EEB524008476D4 /* Array+Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A3F59EF23EEFDDC00874ECB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A3F5A0923EF014A00874ECB /* CityTableViewCell.swift in Sources */,
+				5A3F5A0B23EF015100874ECB /* CitiesModuleViewToPresenter.swift in Sources */,
+				5A3F59FF23EEFE0800874ECB /* CitiesModuleViewController.swift in Sources */,
+				5A3F59F623EEFDDC00874ECB /* CitiesModulePresenterTests.swift in Sources */,
+				5A3F5A0523EF013500874ECB /* CitiesModuleInteractor.swift in Sources */,
+				5A3F5A0623EF013900874ECB /* CitiesModulePresenterToInteractor.swift in Sources */,
+				5A3F5A0A23EF014E00874ECB /* CitiiesModulePresenterToView.swift in Sources */,
+				5A3F5A0E23EF01F800874ECB /* CitiesModuleInteractorTests.swift in Sources */,
+				5A3F5A0723EF013C00874ECB /* CitiesModuleInteractorToPresenter.swift in Sources */,
+				5A3F5A0823EF013F00874ECB /* CitiesModulePresenter.swift in Sources */,
+				5A3F5A0223EEFFA100874ECB /* CitiesModuleConfiguratorTests.swift in Sources */,
+				5A3F5A0423EF012B00874ECB /* CitiesModuleConfigurator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A4E4EFA23F06B9300239E91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A4E4F0923F06BA800239E91 /* ForecastModuleConfigurator.swift in Sources */,
+				5A4E4F1B23F06CD900239E91 /* ForecastModulePresenterTests.swift in Sources */,
+				5A4E4F1123F06BCC00239E91 /* ForecastModulePresenterToView.swift in Sources */,
+				5A4E4F0D23F06BB900239E91 /* ForecastModulePresenterToInteractor.swift in Sources */,
+				5A4E4F0E23F06BBE00239E91 /* ForecastModulePresenter.swift in Sources */,
+				5A4E4F1C23F06D5D00239E91 /* NextDayTableViewCell.swift in Sources */,
+				5A4E4F0B23F06BB100239E91 /* ForecastModuleInteractor.swift in Sources */,
+				5A4E4F1223F06BD200239E91 /* CurrentTemperatureTableViewCell.swift in Sources */,
+				5A4E4F1023F06BC900239E91 /* ForecastModuleViewToPresenter.swift in Sources */,
+				5A4E4F0C23F06BB500239E91 /* ForecastModuleInteractorToPresenter.swift in Sources */,
+				5A4E4F0F23F06BC600239E91 /* ForecastModuleViewController.swift in Sources */,
+				5A4E4F1923F06CBF00239E91 /* ForecastModuleInteractorTests.swift in Sources */,
+				5A4E4F1423F06BE100239E91 /* HourCollectionViewCell.swift in Sources */,
+				5A4E4F0123F06B9300239E91 /* ForecastModuleConfiguratorTests.swift in Sources */,
+				5A4E4F1323F06BDD00239E91 /* HourlyTableViewCell.swift in Sources */,
+				5A4E4F0A23F06BAC00239E91 /* ForecastModuleIntializer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A8177F923EC19E8006680FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A81780123EC19E8006680FA /* AppDelegate.swift in Sources */,
+				5A0F501823EDDCE300E8E30A /* ForecastModuleCoordinator.swift in Sources */,
+				5A81780323EC19E8006680FA /* SceneDelegate.swift in Sources */,
+				5A0EA30723EC3813001EF316 /* Coordinator.swift in Sources */,
+				5A0EA30923EC383E001EF316 /* CitiesModuleCoordinator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5A0EA29D23EC315F001EF316 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A0EA29623EC315F001EF316 /* NetworkLayer */;
+			targetProxy = 5A0EA29C23EC315F001EF316 /* PBXContainerItemProxy */;
+		};
+		5A0EA2AF23EC3173001EF316 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A0EA2A823EC3173001EF316 /* Entities */;
+			targetProxy = 5A0EA2AE23EC3173001EF316 /* PBXContainerItemProxy */;
+		};
+		5A0EA2C023EC31B1001EF316 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A0EA2B923EC31B1001EF316 /* CitiesModule */;
+			targetProxy = 5A0EA2BF23EC31B1001EF316 /* PBXContainerItemProxy */;
+		};
+		5A0EA2FD23EC35E5001EF316 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A0EA29623EC315F001EF316 /* NetworkLayer */;
+			targetProxy = 5A0EA2FC23EC35E5001EF316 /* PBXContainerItemProxy */;
+		};
+		5A0EA30223EC35F2001EF316 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A0EA2A823EC3173001EF316 /* Entities */;
+			targetProxy = 5A0EA30123EC35F2001EF316 /* PBXContainerItemProxy */;
+		};
+		5A0F4FF923EDD6F600E8E30A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A0F4FF223EDD6F600E8E30A /* ForecastModule */;
+			targetProxy = 5A0F4FF823EDD6F600E8E30A /* PBXContainerItemProxy */;
+		};
+		5A0F502223EDF3A500E8E30A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A0EA2A823EC3173001EF316 /* Entities */;
+			targetProxy = 5A0F502123EDF3A500E8E30A /* PBXContainerItemProxy */;
+		};
+		5A0F502723EDF3AB00E8E30A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A0EA29623EC315F001EF316 /* NetworkLayer */;
+			targetProxy = 5A0F502623EDF3AB00E8E30A /* PBXContainerItemProxy */;
+		};
+		5A0F502D23EDF3B800E8E30A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A1878F623ECC2920043EDAD /* Utils */;
+			targetProxy = 5A0F502C23EDF3B800E8E30A /* PBXContainerItemProxy */;
+		};
+		5A1878FD23ECC2920043EDAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A1878F623ECC2920043EDAD /* Utils */;
+			targetProxy = 5A1878FC23ECC2920043EDAD /* PBXContainerItemProxy */;
+		};
+		5A3F59FA23EEFDDC00874ECB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A0EA2B923EC31B1001EF316 /* CitiesModule */;
+			targetProxy = 5A3F59F923EEFDDC00874ECB /* PBXContainerItemProxy */;
+		};
+		5A4E4F0523F06B9300239E91 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A0F4FF223EDD6F600E8E30A /* ForecastModule */;
+			targetProxy = 5A4E4F0423F06B9300239E91 /* PBXContainerItemProxy */;
+		};
+		5AC96C2223EE9AC6008476D4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A0EA2A823EC3173001EF316 /* Entities */;
+			targetProxy = 5AC96C2123EE9AC6008476D4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5A81780B23EC19E9006680FA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A81780C23EC19E9006680FA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5A0EA2A123EC315F001EF316 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = NetworkLayer/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = myCompany.NetworkLayer;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5A0EA2A223EC315F001EF316 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = NetworkLayer/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = myCompany.NetworkLayer;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5A0EA2B323EC3173001EF316 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Entities/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = myCompany.Entities;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5A0EA2B423EC3173001EF316 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Entities/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = myCompany.Entities;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5A0EA2C423EC31B1001EF316 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CitiesModule/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = myCompany.CitiesModule;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5A0EA2C523EC31B1001EF316 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CitiesModule/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = myCompany.CitiesModule;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5A0F4FFD23EDD6F600E8E30A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ForecastModule/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = myCompany.ForecastModule;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5A0F4FFE23EDD6F600E8E30A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ForecastModule/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = myCompany.ForecastModule;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5A18790123ECC2920043EDAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Utils/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = myCompany.Utils;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5A18790223ECC2920043EDAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Utils/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = myCompany.Utils;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5A3F59FC23EEFDDC00874ECB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CitiesModuleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = myCompany.CitiesModuleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5A3F59FD23EEFDDC00874ECB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CitiesModuleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = myCompany.CitiesModuleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5A4E4F0623F06B9300239E91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ForecastModuleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = myCompany.ForecastModuleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5A4E4F0723F06B9300239E91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ForecastModuleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = myCompany.ForecastModuleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5A81780F23EC19E9006680FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5A81781023EC19E9006680FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5A81781223EC19E9006680FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Weather-For-Three-Days/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "myCompany.Weather-For-Three-Days";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		5A81781323EC19E9006680FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Weather-For-Three-Days/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "myCompany.Weather-For-Three-Days";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5A0EA2A023EC315F001EF316 /* Build configuration list for PBXNativeTarget "NetworkLayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A0EA2A123EC315F001EF316 /* Debug */,
+				5A0EA2A223EC315F001EF316 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A0EA2B223EC3173001EF316 /* Build configuration list for PBXNativeTarget "Entities" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A0EA2B323EC3173001EF316 /* Debug */,
+				5A0EA2B423EC3173001EF316 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A0EA2C323EC31B1001EF316 /* Build configuration list for PBXNativeTarget "CitiesModule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A0EA2C423EC31B1001EF316 /* Debug */,
+				5A0EA2C523EC31B1001EF316 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A0F4FFC23EDD6F600E8E30A /* Build configuration list for PBXNativeTarget "ForecastModule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A0F4FFD23EDD6F600E8E30A /* Debug */,
+				5A0F4FFE23EDD6F600E8E30A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A18790023ECC2920043EDAD /* Build configuration list for PBXNativeTarget "Utils" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A18790123ECC2920043EDAD /* Debug */,
+				5A18790223ECC2920043EDAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A3F59FB23EEFDDC00874ECB /* Build configuration list for PBXNativeTarget "CitiesModuleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A3F59FC23EEFDDC00874ECB /* Debug */,
+				5A3F59FD23EEFDDC00874ECB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A4E4F0823F06B9300239E91 /* Build configuration list for PBXNativeTarget "ForecastModuleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A4E4F0623F06B9300239E91 /* Debug */,
+				5A4E4F0723F06B9300239E91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A8177F823EC19E8006680FA /* Build configuration list for PBXProject "Weather-For-Three-Days" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A81780F23EC19E9006680FA /* Debug */,
+				5A81781023EC19E9006680FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A81781123EC19E9006680FA /* Build configuration list for PBXNativeTarget "Weather-For-Three-Days" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A81781223EC19E9006680FA /* Debug */,
+				5A81781323EC19E9006680FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5A827AFC23EC53BC00A5C197 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.13.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5A0F502823EDF3B100E8E30A /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5A827AFC23EC53BC00A5C197 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		5A18790523ECCFCA0043EDAD /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5A827AFC23EC53BC00A5C197 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		5A827AFD23EC53BC00A5C197 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5A827AFC23EC53BC00A5C197 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 5A8177F523EC19E8006680FA /* Project object */;
+}
